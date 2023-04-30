@@ -1,0 +1,9 @@
+{
+  "name": "OpenAIWithNode",
+  "version": "1.0.0",
+  "type": "module",
+
+  "dependencies": {
+    "openai": "^3.2.1"
+  }
+}

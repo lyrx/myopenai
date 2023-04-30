@@ -1,0 +1,7 @@
+<component name="ProjectCodeStyleConfiguration">
+  <code_scheme name="Project" version="173">
+    <ScalaCodeStyleSettings>
+      <option name="MULTILINE_STRING_INSERT_MARGIN_ON_ENTER" value="false" />
+    </ScalaCodeStyleSettings>
+  </code_scheme>
+</component>

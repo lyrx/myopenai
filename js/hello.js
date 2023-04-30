@@ -1,11 +1,6 @@
-import { Configuration, OpenAIApi } from "openai";
 import { prompts } from "./prompts.mjs";
+import {  openai } from "./openai.mjs";
 
-const configuration = new Configuration({
-    organization: "org-iX3AplRFfPst8hdpXcv7gfv2",
-    apiKey: process.env.OPENAI_API_KEY
-});
-const openai = new OpenAIApi(configuration);
 //const response = await openai.listEngines();
 
 

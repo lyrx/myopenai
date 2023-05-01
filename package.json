@@ -2,8 +2,9 @@
   "name": "OpenAIWithNode",
   "version": "1.0.0",
   "type": "module",
-
   "dependencies": {
-    "openai": "^3.2.1"
+    "fs": "^0.0.1-security",
+    "openai": "^3.2.1",
+    "path": "^0.12.7"
   }
 }

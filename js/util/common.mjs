@@ -1,4 +1,3 @@
-
 function getCurrentTime() {
     const now = new Date();
     const hours = String(now.getHours()).padStart(2, '0');
@@ -17,12 +16,13 @@ function getCurrentDate_ddMMYYYY() {
     return `${day}.${month}.${year}`;
 }
 
-function mylog(s){
+function mylog(s) {
     console.log(s);
 }
-function myerror(s){
+
+function myerror(s) {
     console.error(s);
 }
 
 
-export { getCurrentTime, getCurrentDate_ddMMYYYY,mylog,myerror };
+export {getCurrentTime, getCurrentDate_ddMMYYYY, mylog, myerror};

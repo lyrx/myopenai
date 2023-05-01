@@ -11,10 +11,7 @@ async function readFile(aFile) {
             myerror(`Input file '${aFile}' does not exist.`);
             return;
         }
-
-        // Read the input JSON file
-        const data = await fs.readFile(aFile, 'utf8');
-        return data;
+        return fs.readFile(aFile, 'utf8');
     } catch (err) {
         myerror('Error:', err);
     }

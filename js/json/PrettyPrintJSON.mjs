@@ -1,14 +1,15 @@
-import fs from 'fs/promises';
 import path from 'path';
-import {  parseJSONFile } from "./jsonutils.mjs";
-
+import {parseJSONFile, prettyPrintJson,prettyPrint} from "./jsonutils.mjs";
+import {  getCurrentTime, getCurrentDate_ddMMYYYY } from "../util/common.mjs";
 
 const downloads = "/Users/alex/Downloads/openaiexport"
 
 // Replace 'input.json' with the path to your JSON file
-const inputFile = path.join(downloads, 'conversations.json');
 
 
-parseJSONFile(inputFile)
 
+prettyPrint(downloads, 'conversations.json')
+
+
+console.log(`Beendet um ${getCurrentTime()} Uhr am ${getCurrentDate_ddMMYYYY()}`)
 

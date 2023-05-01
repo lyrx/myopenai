@@ -1,6 +1,6 @@
 const prompts = {
 
-    p1: `
+    factualAnsweringSample: `
 Q: Who is Batman?
 A: Batman is a fictional comic book character.
 

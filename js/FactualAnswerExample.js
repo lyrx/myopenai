@@ -1,5 +1,6 @@
-import { prompts } from "./prompts.mjs";
-import {  openai } from "./openai.mjs";
+import { prompts } from "./openai/prompts.mjs";
+import {  openai } from "./openai/openai.mjs";
+import {mylog} from "./util/common.mjs";
 
 //const response = await openai.listEngines();
 
@@ -17,4 +18,4 @@ const response = await openai.createCompletion({
 
 
 
-console.log(response.data)
+mylog(response.data.choices[0].text)

@@ -1,6 +1,7 @@
+import {readFile} from "../json/jsonutils.mjs";
+import {mylog} from "../util/common.mjs";
+
 const prompts = {
-    "it-consultant": `Du bist IT-Consultant und das ist dein Lebenslauf.
- Beantworte alle weiteren Fragen in der Ich-Form, als kämen sie von einem Recruiter.`,
 
     "factualAnsweringSample": `
 Q: Who is Batman?
@@ -41,6 +42,33 @@ A:
     `
 }
 
+async function readCV() {
+    return  readFile("json/shortcv.json")
+}
 
-export {prompts};
+async function cvprompt(question) {
+
+    return `Du bist IT-Consultant und das ist dein Lebenslauf im JSON-Format:
+    
+${await readCV()}
+
+Du arbeitest seit 1999 mit Java. 
+
+Beantworte alle weiteren Fragen in der Ich-Form, als kämen sie von einem Recruiter.
+
+${question}
+`
+
+}
+
+
+async function output_cvprompt(question) {
+
+    mylog(await cvprompt(question));
+
+
+}
+
+
+export {prompts,readCV,cvprompt,output_cvprompt};
 

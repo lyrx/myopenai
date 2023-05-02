@@ -93,85 +93,36 @@
       "date": "01.05.2014 - 30.06.2015",
       "company": "AXA Winterthur Versicherungen",
       "position": "DevOPS",
-      "responsibility": "Ich war für automatische Deployments,  Versionsverwaltung und konsolidierte Rollouts der neu zu entwickelnden Software zur Beantragung und Verwaltung von Fahrzeugversicherungen zuständig.",
+      "responsibility": "Verwaltung von Fahrzeugversicherungen: CI/CD",
       "technologies": "Scrum, Git/GitHub, Jenkins, Maven, Groovy, Selenium, Jira, JEE, JProfiler, Dynatrace, Intellij, Javascript, JBoss, Spring Boot"
     },
     {
       "date": "01.04.2013 – 12.2013",
       "company": "Credit Suisse AG, Zürich",
       "position": "Senior Solution Engineer Technical Integration/Testing",
-      "responsibility": "Ich unterstützte die Testautomatisierung und die Wartung der Buildsysteme  im der Abteilung für technische Integration und Testing der Credit Suisse.",
-      "technologies": "JAP, JEE, Teamcity, Maven, Jenkins, Webservices, CS-JSF, Weblogic Server, Unix/Linux, HP Service-Manager, JAP,          Swan XP (Change Requests), SDSS  (Software-Repository, Deployments), BMC Remedy (Issue Tracking)"
+      "responsibility": "CI/CD bankweit",
+      "technologies": "JAP, JEE, Teamcity, Maven, Jenkins, Webservices, CS-JSF, Weblogic Server, Unix/Linux, HP Service-Manager, JAP"
     },
     {
       "date": "01.05.2010 – 03.2013",
       "company": "Credit Suisse AG, Zürich",
       "position": "Software Configuration Manager / Senior Java Developer",
-      "responsibility": "Applikationsverwaltung für die Anwendungen im Bereich Kreditrisiko",
-      "technologies": "JAP, JEE, Teamcity, Maven, Jenkins, Webservices, CS-JSF, Weblogic Server, Unix/Linux, HP Service-Manager, JAP,          Swan XP (Change Requests), SDSS  (Software-Repository, Deployments), BMC Remedy (Issue Tracking)"
+      "responsibility": "Applikationsverwaltung Kreditrisiko-Anwendungen",
+      "technologies": "JAP, JEE, Teamcity, Maven, Jenkins, Webservices, CS-JSF, Weblogic Server, Unix/Linux, HP Service-Manager, JAP"
     },
     {
       "date": "01.04.2009 - 31.02.2010",
       "company": "Commerzbank Frankfurt",
       "position": "Software Configuration Manager / Senior Java Developer",
-      "responsibility": "Ich half mit, das Buildmanagement im Projekt KP 2.0 (Merger Commerzbank/Dresdner Bank) aufzubauen.",
+      "responsibility": "Buildmanagement  Projekt KP 2.0 (Merger Commerzbank/Dresdner Bank)",
       "technologies": "Websphere-Applicationserver, Hudson/Jenkins, Maven, JEE, SVN, GIT, Perl, Javascript"
     },
     {
       "date": "01.10.2007 - 30.11.2008",
       "company": "SwissLife",
       "position": "Senior Java Developer SCM",
-      "responsibility": "Wartung eines Systems zur Vertragsverwaltung von Lebensversicherungen (Frontend)",
+      "responsibility": "Vertragsverwaltung von Lebensversicherungen (Frontend)",
       "technologies": "Oracle-DB, Java, Eclipse, JEE, XML, Java, Swing"
-    },
-    {
-      "date": "01.10.2007 - 31.12.2007",
-      "company": "lyrx GmbH",
-      "position": "Geschäftsführer",
-      "responsibility": "Aufbau Geschäftstätigkeit lyrx GmbH",
-      "technologies": "Ajax (Prototype, DOJO), Google API"
-    },
-    {
-      "date": "01.09.2003 - 30.11.2006",
-      "company": "SAP AG",
-      "position": "Senior Developer",
-      "responsibility": "Integration von   MaxDB in die SAP Netweaver Umgebung",
-      "technologies": "Perl, Java/SWING, JEE, MaxDB (MySQL), RMI, SAP-Basis, SAP Netweaver"
-    },
-    {
-      "date": "01.08.2001 - 31.08.2003",
-      "company": "Mummert Consulting AG",
-      "position": "IT-Consultant",
-      "responsibility": "Aufbau der Entwicklungsumgebung für das neue Vorgangsbearbeitungssystem der Polizei NRW",
-      "technologies": "XML, Java/SWING, JEE, Jenkins, Maven, JProfiler"
-    },
-    {
-      "date": "01.01.2001 - 31.07.2001",
-      "company": "abaXX AG",
-      "position": "Software Engineer Training",
-      "responsibility": "Entwicklung von EJB-Komponenten und abaXX Components für Schulungszwecke",
-      "technologies": "Java/JEE (EJB), abaXX-Components, TogetherJ"
-    },
-    {
-      "date": "01.09.1999 - 31.12.2000",
-      "company": "BCT AG",
-      "position": "Developer Mechanical Engineering",
-      "responsibility": "Entwicklung eines Internetportals für Maschinenbau-Ingenieure: BCT Portal",
-      "technologies": "Java/JEE, Oracle-DB, Perl, PHP, MySQL, XML, Cocoon"
-    },
-    {
-      "date": "01.05.1998 - 31.08.1999",
-      "company": "SAP",
-      "position": "Developer Database Tools",
-      "responsibility": "Entwicklung eines Werkzeugs zur Datenbankadministration für Oracle auf SAP R/3 (SAPDBA)",
-      "technologies": "Java/XML, RMI, Java-SWING, C, Oracle-DB, SAP-Basis"
-    },
-    {
-      "date": "01.05.1996 - 30.04.1998",
-      "company": "SAP AG",
-      "position": "Studentischer Mitarbeiter",
-      "responsibility": "Installations- und Migrationstests für SAP R/3 auf UNIX",
-      "technologies": "Oracle, R/3, SAPINST, AIX, Sun Solaris, HP-UX, Linux, VI, Java"
     }
   ],
   "education": {

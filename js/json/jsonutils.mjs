@@ -23,7 +23,7 @@ async function prettyPrintJson(data, outputFile) {
         const jsonData = JSON.parse(data);
 
         // Pretty-print the JSON data
-        const prettyData = JSON.stringify(jsonData, null, 2);
+        const prettyData = stringifyPretty(jsonData)
 
         // Write the pretty-printed JSON data to the output file
         await fs.writeFile(outputFile, prettyData, 'utf8');
@@ -32,6 +32,9 @@ async function prettyPrintJson(data, outputFile) {
     } catch (err) {
         myerror('Error:', err);
     }
+}
+function stringifyPretty(data){
+    return JSON.stringify(data, null, 2);
 }
 
 async function prettyPrint(dirString, sourceFileName) {
@@ -46,4 +49,4 @@ async function prettyPrint(dirString, sourceFileName) {
 }
 
 
-export {readFile, prettyPrintJson, prettyPrint};
+export {readFile, prettyPrintJson, prettyPrint,stringifyPretty};

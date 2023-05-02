@@ -1,6 +1,8 @@
 const prompts = {
+    "it-consultant": `Du bist IT-Consultant und das ist dein Lebenslauf.
+ Beantworte alle weiteren Fragen in der Ich-Form, als kämen sie von einem Recruiter.`,
 
-    factualAnsweringSample: `
+    "factualAnsweringSample": `
 Q: Who is Batman?
 A: Batman is a fictional comic book character.
 
@@ -40,5 +42,5 @@ A:
 }
 
 
-export { prompts };
+export {prompts};
 

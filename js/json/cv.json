@@ -88,19 +88,21 @@
       "date": "04.2013 – 12.2013",
       "company": "Credit Suisse AG, Zürich",
       "position": "Senior Solution Engineer Technical Integration/Testing",
-      "responsibility": "Ich unterstützte die Testautomatisierung und die Wartung der Buildsysteme  im der Abteilung für technische Integration und Testing der Credit Suisse."
+      "responsibility": "Ich unterstützte die Testautomatisierung und die Wartung der Buildsysteme  im der Abteilung für technische Integration und Testing der Credit Suisse.",
+      "technologies": "JAP, JEE, Teamcity, Maven, Jenkins, Webservices, CS-JSF, Weblogic Server, Unix/Linux, HP Service-Manager, JAP,          Swan XP (Change Requests), SDSS  (Software-Repository, Deployments), BMC Remedy (Issue Tracking)"
     },
     {
       "date": "05.2010 – 03.2013",
       "company": "Credit Suisse AG, Zürich",
       "position": "Software Configuration Manager / Senior Java Developer",
-      "responsibility": "Applikationsverwaltung für die Anwendungen im Bereich Kreditrisiko"
+      "responsibility": "Applikationsverwaltung für die Anwendungen im Bereich Kreditrisiko",
+      "technologies": "JAP, JEE, Teamcity, Maven, Jenkins, Webservices, CS-JSF, Weblogic Server, Unix/Linux, HP Service-Manager, JAP,          Swan XP (Change Requests), SDSS  (Software-Repository, Deployments), BMC Remedy (Issue Tracking)"
     },
     {
       "date": "01.04.2009 - 31.02.2010",
       "company": "Commerzbank Frankfurt",
       "position": "Software Configuration Manager / Senior Java Developer",
-      "responsibility": "Ich half mit, das Buildmanagement im Projekt KP 2.0           (Merger Commerzbank/Dresdner Bank) aufzubauen.",
+      "responsibility": "Ich half mit, das Buildmanagement im Projekt KP 2.0 (Merger Commerzbank/Dresdner Bank) aufzubauen.",
       "technologies": "Websphere-Applicationserver, Hudson/Jenkins, Maven, JEE, SVN, GIT, Perl, Javascript"
     },
     {

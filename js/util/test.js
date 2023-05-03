@@ -1,6 +1,7 @@
-import {mylog} from "./common.mjs";
-import {stringToDates} from "./dates.mjs";
+import {mylog, mylogObject} from "./common.mjs";
+
+import {readCV_object,readCV} from "../cv/cv.mjs";
 
 
-mylog(stringToDates("01.10.2007 -     31.12.2007"));
+mylogObject(await readCV_object());
 

@@ -1,7 +1,3 @@
-import {cvRequest} from "./openai/openai.mjs";
-import {output_cvprompt} from "./openai/prompts.mjs";
-import {mylog, parseGermanDateString} from "./util/common.mjs";
-
 const date1 = new Date("2023-05-02");
 const date2 = new Date("2023-05-10");
 

@@ -1,5 +1,5 @@
 import {Configuration, OpenAIApi} from "openai";
-import {cvprompt} from "./prompts.mjs";
+import {cvprompt} from "../cv/cv.mjs";
 import {mylog} from "../util/common.mjs";
 
 const configuration = new Configuration({

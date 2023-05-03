@@ -1,7 +1,7 @@
 import fs from 'fs/promises';
 import path from 'path';
-import {getCurrentDate_ddMMYYYY, getCurrentTime, myerror, mylog} from "../util/common.mjs";
-
+import {getCurrentDate_ddMMYYYY, getCurrentTime} from "../util/dates.mjs";
+import {myerror, mylog} from "../util/common.mjs";
 async function readFile(aFile) {
     try {
         // Check if the input file exists

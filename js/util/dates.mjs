@@ -18,8 +18,7 @@ function getCurrentDate_ddMMYYYY() {
 
 function parseGermanDateString(dateString) {
     const [day, month, year] = dateString.split('.');
-    const parsedDate = new Date(year, month - 1, day);
-    return parsedDate;
+    return new Date(`${year}-${month}-${day}`);
 }
 
 
@@ -68,7 +67,7 @@ Beachte, dass diese Methode nur die Monatsdifferenz schätzt, ohne die verbleibe
  */
 function monthsBetween(date1, date2) {
     let yearsDifference = date2.getFullYear() - date1.getFullYear();
-    let monthsDifference = date2.getMonth() - date1.getMonth();
+    let monthsDifference = date2.getMonth() - date1.getMonth() + 1;
 
 // Berechne die Gesamtdifferenz in Monaten
     let totalMonthsDifference = yearsDifference * 12 + monthsDifference;
@@ -91,7 +90,7 @@ function yearsBetween(date1, date2) {
 }
 
 function stringToDates(inputString) {
-    const regexSeparator = /\s*-\s*/;
+    const regexSeparator = /\s*[–,-]\s*/;
     const [dateString1, dateString2] = inputString.split(regexSeparator);
     return [parseGermanDateString(dateString1), parseGermanDateString(dateString2)]
 

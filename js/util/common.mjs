@@ -18,6 +18,13 @@ function mylogObject(o) {
 }
 
 
+function isSubstringIgnoreCase(mainString, subString) {
+    const lowerMainString = mainString.toLowerCase();
+    const lowerSubString = subString.toLowerCase();
+
+    return lowerMainString.includes(lowerSubString);
+}
+
 
 function mylogWithTime(s) {
     console.log(`${getCurrentTime()}: ${s}`);
@@ -35,5 +42,6 @@ export {
     mylogObject,
     mylogWithTime,
     myerrorWithTime,
-    zipWithIndex
+    zipWithIndex,
+    isSubstringIgnoreCase
 };

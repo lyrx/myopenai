@@ -9,9 +9,9 @@
       "date": "01.10.2021 – 31.12.2022",
       "company": "SBB Schweizer Bahn",
       "project": "Strukturauftrag Kundeninformation (SKI)",
+      "position": "Test-Manager",
       "responsibilities": [
-        "Test-Management, DevOps",
-        "Aufbau und Wartung der «Continuous Delivery»-Plattform auf Basis Openshift und ArgoCD / GitOps",
+        "CI/CD mit Openshift, ArgoCD, GitOps",
         "Pflege der eigenentwickelten Test-Engine"
       ],
       "technologies": "Jira, Jenkins, Intellij, Java, Confluence, IBM MQ, Kafka, Openshift, Kubernetes, Helm, GitOps, ArgoCD, Confluence, GitOps, Kubernetes"
@@ -19,8 +19,8 @@
     {
       "date": "01.01.2021 – 31.05.2021",
       "company": "Bundesamt für Migration und Flüchtlinge, Nürnberg",
+      "position": "Coach des Projektleiters",
       "responsibilities": [
-        "Technische Projektleitung, Coaching",
         "Beratung des Projektleiters bei organisatorischen Fragen und Mitarbeiterführung"
       ],
       "technologies": "Jira, Sharepoint, Hyperledger Fabric, Java, Node.js, Spring Boot, Confluence"
@@ -28,8 +28,8 @@
     {
       "date": "01.08.2020 – 31.12.2020",
       "company": "Helsana Versicherungen AG",
+      "position": "Performance-Analyst",
       "responsibilities": [
-        "Testmanager, Performance-Analyst",
         "Koordination der Durchführung von Lasttests im Rahmen des Rollouts einer neuen Version von Adcubum Syrius"
       ],
       "technologies": "Jira, Sharepoint, NeoLoad, Splunk, Adcubum, Confluence"
@@ -39,7 +39,7 @@
       "company": "Adnovum Informatik AG",
       "position": "Senior Java-Developer",
       "project": "RM-Portal VP-Bank Liechtenstein",
-      "responsibility": "Entwicklung eines neuen Customer-Relationship-Management-Portals für die VP-Bank Liechtenstein",
+      "responsibilities": ["Entwicklung eines neuen Customer-Relationship-Management-Portals für die VP-Bank Liechtenstein"],
       "technologies": "Java 11, Spring Boot, Kafka, Swagger, Intellij, Junit, Jira, Bitbucket , Microservices, GoCD, Jira, Scrum"
     },
     {
@@ -47,7 +47,8 @@
       "company": "Kantonspolizei, St Gallen, Schweiz",
       "position": "Senior Java-Consultant",
       "project": "Entwicklungsumgebung und Testautomatisierung für die Erstellung von Wordvorlagen",
-      "responsibility": "Analyse und Test der Formulargenerierung für das Vorgangsbearbeitungssystem (LogObject) der Kantonspolizei St Gallen",
+      "responsibilities": [
+        "Analyse und Test des Vorgangsbearbeitungssystems (LogObject)."],
       "technologies": "Agile, Jenkins, Git, Freemarker, Java, Eclipse, Unix-Scripting"
     },
     {
@@ -64,113 +65,116 @@
     {
       "date": "01.03.2019 – 31.08.2019",
       "company": "Eternitas, Zürich",
-      "position": "Technischer Leiter / Lead Developer",
-      "responsibility": "Koordination und Entwicklung eines POC («Proof of Concept») für die Registrierung von Testamenten auf einer Blockchain (Stellar und IPFS)",
+      "position": "Lead Developer",
+      "responsibilities": [
+        "Registrierung von Testamenten auf der Blockchain"],
       "technologies": "Jenkins, AWS, Git, Bitbucket, Java, Linux, React,  ScalablyTyped, IPFS, Stellar, SubtleCrypto, Docker, AWS, Unix-Scripting, Scrum"
     },
     {
       "date": "01.06.2018 – 31.12.2018",
       "company": "Galexis, Niederbipp – Schweiz",
-      "position": "DevOps / Technical Analyst",
-      "responsibility": "Analyse und Dokumentation eines ERP-Systems in der Pharma-Logistik (Bestellungen, Lieferungen von Medikamenten) im Vorlauf für die SAP-Einführung",
+      "position": "Technical Analyst",
+      "responsibilities": [
+        "Analyse und Dokumentation: ERP-Systems, SAP-Einführung"],
       "technologies": "JBoss, JSP, Servlets, Struts, Spring / Spring Boot, Scrum, Java, Javascript, JSF, Structure 101, Tomcat,Docker, Eclipse, Git, React, Spring Boot,Oracle,Scrum"
     },
     {
       "date": "01.06.2016 – 31.10.2017",
       "company": "Adnovum Informatik AG, Zürich",
       "position": "Senior Development Engineer",
-      "responsibility": "Wartung eines Systems zur Darstellung von Kundenvermögen (Asset-View) bei der Bank UBS und Integration einer neuen Schnittstelle zur Abfrage von Depotdaten",
+      "responsibilities": [
+        "\"Asset-View\", Depotdatenverwaltung"],
       "technologies": "Git, Scrum, Intellij, Bitbucket, Jira, Struts, Websphere Application Server, Java, Javascript, JSP, JSF, JBoss, Oracle, Unix-Scripting"
     },
     {
       "date": "01.06.2015 - 31.05.2016",
       "company": "lyrx GmbH Binz",
       "position": "Senior Development Engineer",
-      "responsibility": "Ich bildete mich im Bereich Blockchain-Technologie fort.",
+      "responsibilities": ["Fortbildung Blockchain/Bitcoin"],
       "technologies": "Scala/Scala.JS, SBT, Akka, Smart Contracts, Ethereum, Intellij, NodeJS, Javascript, Meteor"
     },
     {
       "date": "01.05.2014 - 30.06.2015",
       "company": "AXA Winterthur Versicherungen",
       "position": "DevOPS",
-      "responsibility": "Ich war für automatische Deployments,  Versionsverwaltung und konsolidierte Rollouts der neu zu entwickelnden Software zur Beantragung und Verwaltung von Fahrzeugversicherungen zuständig.",
+      "responsibilities": ["Automatische Deployments Fahrzeugversicherung"],
       "technologies": "Scrum, Git/GitHub, Jenkins, Maven, Groovy, Selenium, Jira, JEE, JProfiler, Dynatrace, Intellij, Javascript, JBoss, Spring Boot"
     },
     {
-      "date": "01.04.2013 – 12.2013",
+      "date": "01.04.2013 – 31.12.2013",
       "company": "Credit Suisse AG, Zürich",
-      "position": "Senior Solution Engineer Technical Integration/Testing",
-      "responsibility": "Ich unterstützte die Testautomatisierung und die Wartung der Buildsysteme  im der Abteilung für technische Integration und Testing der Credit Suisse.",
-      "technologies": "JAP, JEE, Teamcity, Maven, Jenkins, Webservices, CS-JSF, Weblogic Server, Unix/Linux, HP Service-Manager, JAP,          Swan XP (Change Requests), SDSS  (Software-Repository, Deployments), BMC Remedy (Issue Tracking)"
+      "position": "Senior Solution Engineer",
+      "responsibilities": ["Testautomatisierung, Buildmanagement"],
+      "technologies": "JAP, JEE, Teamcity, Maven, Jenkins, Webservices, CS-JSF, Weblogic Server, Unix/Linux, HP Service-Manager, JAP,Swan XP (Change Requests), SDSS  (Software-Repository, Deployments), BMC Remedy (Issue Tracking)"
     },
     {
-      "date": "01.05.2010 – 03.2013",
+      "date": "01.05.2010 – 31.03.2013",
       "company": "Credit Suisse AG, Zürich",
-      "position": "Software Configuration Manager / Senior Java Developer",
-      "responsibility": "Applikationsverwaltung für die Anwendungen im Bereich Kreditrisiko",
+      "position": "Software Configuration Manager",
+      "responsibilities": ["Applikationsverwaltung für die Anwendungen im Bereich Kreditrisiko"],
       "technologies": "JAP, JEE, Teamcity, Maven, Jenkins, Webservices, CS-JSF, Weblogic Server, Unix/Linux, HP Service-Manager, JAP,          Swan XP (Change Requests), SDSS  (Software-Repository, Deployments), BMC Remedy (Issue Tracking)"
     },
     {
       "date": "01.04.2009 - 31.02.2010",
       "company": "Commerzbank Frankfurt",
-      "position": "Software Configuration Manager / Senior Java Developer",
-      "responsibility": "Ich half mit, das Buildmanagement im Projekt KP 2.0 (Merger Commerzbank/Dresdner Bank) aufzubauen.",
+      "position": "Software Configuration Manager",
+      "responsibilities": ["Buildmanagement im Projekt KP 2.0"],
       "technologies": "Websphere-Applicationserver, Hudson/Jenkins, Maven, JEE, SVN, GIT, Perl, Javascript"
     },
     {
       "date": "01.10.2007 - 30.11.2008",
       "company": "SwissLife",
-      "position": "Senior Java Developer SCM",
-      "responsibility": "Wartung eines Systems zur Vertragsverwaltung von Lebensversicherungen (Frontend)",
+      "position": "Senior Java Developer",
+      "responsibilities": ["Vertragsverwaltung von Lebensversicherungen"],
       "technologies": "Oracle-DB, Java, Eclipse, JEE, XML, Java, Swing"
     },
     {
       "date": "01.10.2007 - 31.12.2007",
       "company": "lyrx GmbH",
       "position": "Geschäftsführer",
-      "responsibility": "Aufbau Geschäftstätigkeit lyrx GmbH",
+      "responsibilities": ["Aufbau Geschäftstätigkeit lyrx GmbH"],
       "technologies": "Ajax (Prototype, DOJO), Google API"
     },
     {
       "date": "01.09.2003 - 30.11.2006",
       "company": "SAP AG",
       "position": "Senior Developer",
-      "responsibility": "Integration von   MaxDB in die SAP Netweaver Umgebung",
+      "responsibilities": ["MaxDB: Installationswerkzeuge"],
       "technologies": "Perl, Java/SWING, JEE, MaxDB (MySQL), RMI, SAP-Basis, SAP Netweaver"
     },
     {
       "date": "01.08.2001 - 31.08.2003",
       "company": "Mummert Consulting AG",
       "position": "IT-Consultant",
-      "responsibility": "Aufbau der Entwicklungsumgebung für das neue Vorgangsbearbeitungssystem der Polizei NRW",
+      "responsibilities": ["Vorgangsbearbeitungssystem der Polizei NRW: NIVADIS"],
       "technologies": "XML, Java/SWING, JEE, Jenkins, Maven, JProfiler"
     },
     {
       "date": "01.01.2001 - 31.07.2001",
       "company": "abaXX AG",
       "position": "Software Engineer Training",
-      "responsibility": "Entwicklung von EJB-Komponenten und abaXX Components für Schulungszwecke",
+      "responsibilities": ["abaXX EJB-Komponenten: Trainings-Umgebung"],
       "technologies": "Java/JEE (EJB), abaXX-Components, TogetherJ"
     },
     {
       "date": "01.09.1999 - 31.12.2000",
       "company": "BCT AG",
-      "position": "Developer Mechanical Engineering",
-      "responsibility": "Entwicklung eines Internetportals für Maschinenbau-Ingenieure: BCT Portal",
+      "position": "Java-Developer",
+      "responsibilities": ["BCT Portal für Maschinenbau-Ingenieure"],
       "technologies": "Java/JEE, Oracle-DB, Perl, PHP, MySQL, XML, Cocoon"
     },
     {
       "date": "01.05.1998 - 31.08.1999",
       "company": "SAP",
-      "position": "Developer Database Tools",
-      "responsibility": "Entwicklung eines Werkzeugs zur Datenbankadministration für Oracle auf SAP R/3 (SAPDBA)",
-      "technologies": "Java/XML, RMI, Java-SWING, C, Oracle-DB, SAP-Basis"
+      "position": "Java-Developer",
+      "responsibilities": ["Werkzeugs zur Oracle-DBA; \"SAPDBA\""],
+      "technologies": "Java,XML, RMI, Java-SWING, C, Oracle-DB, SAP-Basis"
     },
     {
       "date": "01.05.1996 - 30.04.1998",
       "company": "SAP AG",
       "position": "Studentischer Mitarbeiter",
-      "responsibility": "Installations- und Migrationstests für SAP R/3 auf UNIX",
+      "responsibilities": ["Installations- und Migrationstests für SAP R/3 auf UNIX"],
       "technologies": "Oracle, R/3, SAPINST, AIX, Sun Solaris, HP-UX, Linux, VI, Java"
     }
   ],

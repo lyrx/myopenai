@@ -1,6 +1,7 @@
 import {Configuration, OpenAIApi} from "openai";
 import {cvprompt} from "../cv/cv.mjs";
-import {mylog} from "../util/common.mjs";
+import {mylog, mylogObject} from "../util/common.mjs";
+
 
 const configuration = new Configuration({
     organization: "org-iX3AplRFfPst8hdpXcv7gfv2",
@@ -19,9 +20,12 @@ async function cvRequest(question){
         frequency_penalty: 0.0,
         presence_penalty: 0.0,
     });
-    mylog(`Q:
-${question}
-A:${response.data.choices[0].text}`);
+
+    mylog(`Q: ${question}
+A:${response.data.choices[0].text}
+
+${JSON.stringify(response.data.usage,null,2)}`);
+
 }
 
 export { openai,cvRequest };

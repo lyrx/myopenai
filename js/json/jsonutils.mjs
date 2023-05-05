@@ -1,7 +1,7 @@
 import fs from 'fs/promises';
 import path from 'path';
 import {getCurrentDate_ddMMYYYY, getCurrentTime} from "../util/dates.mjs";
-import {myerror, mylog} from "../util/common.mjs";
+import {llog} from "../util/common.mjs";
 async function readFile(aFile) {
     try {
         // Check if the input file exists
@@ -27,7 +27,7 @@ async function prettyPrintJson(data, outputFile) {
 
         // Write the pretty-printed JSON data to the output file
         await fs.writeFile(outputFile, prettyData, 'utf8');
-        mylog(`Beendet um ${getCurrentTime()} Uhr am ${getCurrentDate_ddMMYYYY()}`)
+        llog.mylog(`Beendet um ${getCurrentTime()} Uhr am ${getCurrentDate_ddMMYYYY()}`)
 
     } catch (err) {
         myerror('Error:', err);
@@ -42,7 +42,7 @@ async function prettyPrint(dirString, sourceFileName) {
     const inputFile = path.join(dirString, sourceFileName);
     const outputFile = path.join(dirString, targetFileName.toString());
 
-    mylog(`${inputFile} -> ${outputFile}`)
+    llog.mylog(`${inputFile} -> ${outputFile}`)
     const data = await readFile(inputFile)
     prettyPrintJson(data, outputFile)
 

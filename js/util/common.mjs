@@ -34,14 +34,10 @@ function myerrorWithTime(s) {
     console.error(`${getCurrentTime()}:${s}`);
 }
 
-
+const llog = {mylog, mylogObject,mylogWithTime,myerrorWithTime}
 
 export {
-    mylog,
-    myerror,
-    mylogObject,
-    mylogWithTime,
-    myerrorWithTime,
+    llog,
     zipWithIndex,
     isSubstringIgnoreCase
 };

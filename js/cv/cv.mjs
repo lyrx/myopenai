@@ -1,61 +1,82 @@
 import {readFile} from "../json/jsonutils.mjs";
-import {isSubstringIgnoreCase, mylog, mylogObject} from "../util/common.mjs";
+import {isSubstringIgnoreCase, llog} from "../util/common.mjs";
 import {project_home} from "../util/paths.mjs";
 import {monthsBetween, stringToDates} from "../util/dates.mjs";
 import fs from "fs";
 import docx from 'docx';
 
 
-function generateDocx() {
-    docx.Packer.toBuffer(asDocx()).then((buffer) => {
+async function generateDocx() {
+    docx.Packer.toBuffer(await asDocx()).then((buffer) => {
         fs.writeFileSync("cv.docx", buffer);
     });
 }
 
 
-function asDocx() {
-    return new docx.Document({
+async function asDocx() {
+    const cv = await readCV_object();
+    const wl = cv.projects();
+    function newLine()  {
+        return new docx.Paragraph({
+            children: [
+                new docx.TextRun("\n"),
+            ],
+        });
+    }
+    const l = wl.reduce(function (accumulator, we) {
+            const n = [
+                new docx.Paragraph({
+                    text: `${we["date"]}`,
+                    heading: docx.HeadingLevel.HEADING_2,
+
+
+                }),
+                new docx.Paragraph({
+                    children: [
+                        new docx.TextRun({
+                            text: we["position"],
+                            italics: true
+                        }),
+                        new docx.TextRun(`: ${we["company"]}`),
+                    ],
+                }),
+                new docx.Paragraph({
+                    text: we["responsibilities"][0],
+                    bullet: {
+                        level: 0
+                    },
+                }),
+                newLine(),
+            ];
+            return accumulator.concat(n);
+        },
+        []);
+
+
+    const config = {
         sections: [
             {
                 properties: {},
-                children: [
-                    new docx.Paragraph({
-                        text: "Alexander Weinmann",
-                        heading: docx.HeadingLevel.HEADING_1,
-
-                    }),
-                    new docx.Paragraph({
-                        children: [
-                            new docx.TextRun("\n"),
-                        ],
-                    }),
-                    new docx.Paragraph({
-                        children: [
-                            new docx.TextRun("Hello World"),
-                            new docx.TextRun({
-                                text: "Foo Bar",
-                                bold: true,
-                            }),
-                            new docx.TextRun({
-                                text: "\tGithub is the best",
-                                bold: true,
-                            }),
-                        ],
-                    }),
-
-
-                ],
+                children: l,
             },
         ],
-    });
+    };
+    return new docx.Document(config);
 }
 
 async function readCV() {
+
     return readFile(`${project_home}/js/json/cv.json`)
 }
 
 async function readCV_object() {
-    return JSON.parse(await readCV())
+    const p = await readCV();
+
+    const o = JSON.parse(p);
+    o.projects = function () {
+        return o["work_experience"]
+    };
+    return o;
 }
 
 function filterbySkill(workExperienceList, skill) {
@@ -153,7 +174,7 @@ ${question}
 
 
 export default {
-    cvprompt, asDocx,generateDocx
+    cvprompt, asDocx, generateDocx
 };
 
 

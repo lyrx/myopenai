@@ -49,7 +49,7 @@
       "project": "Entwicklungsumgebung und Testautomatisierung für die Erstellung von Wordvorlagen",
       "responsibilities": [
         "Analyse und Test des Vorgangsbearbeitungssystems (LogObject)."],
-      "technologies": "Jenkins,   Java, Eclipse, Linux"
+      "technologies": "Jenkins, Java, Eclipse, Linux"
     },
     {
       "date": "01.03.2019 – 31.08.2019",
@@ -74,13 +74,6 @@
       "responsibilities": [
         "\"Asset-View\", Depotdatenverwaltung"],
       "technologies": "Scrum, Intellij, Bitbucket, Jira, Struts,  Java, Javascript, JSP, JSF, Oracle, Linux"
-    },
-    {
-      "date": "01.06.2015 - 31.05.2016",
-      "company": "lyrx GmbH Binz",
-      "position": "Senior Development Engineer",
-      "responsibilities": ["Fortbildung Blockchain/Bitcoin"],
-      "technologies": "Scala,Intellij, Node.js, Javascript"
     },
     {
       "date": "01.05.2014 - 30.06.2015",
@@ -124,14 +117,16 @@
       "position": "Geschäftsführer",
       "responsibilities": ["Aufbau Geschäftstätigkeit lyrx GmbH"],
       "technologies": ""
-    },
+    }
+  ],
+  "festanstellung": [
     {
       "date": "01.09.2003 - 30.11.2006",
       "company": "SAP AG Berlin",
       "position": "Senior Developer",
       "responsibilities": ["MaxDB: Installationswerkzeuge"],
       "technologies": "Perl, Java,Swing, SAP"
-          },
+    },
     {
       "date": "01.08.2001 - 31.08.2003",
       "company": "Mummert Consulting Hamburg",

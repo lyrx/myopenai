@@ -16,52 +16,63 @@ async function generateDocx() {
 async function asDocx() {
     const cv = await readCV_object();
     const wl = cv.projects();
-    function newLine()  {
+
+    function newLine() {
         return new docx.Paragraph({
             children: [
                 new docx.TextRun("\n"),
             ],
         });
     }
-    const l = wl.reduce(function (accumulator, we) {
-            const n = [
-                new docx.Paragraph({
-                    text: `${we["date"]}`,
-                    heading: docx.HeadingLevel.HEADING_2,
 
+    function workDescription(we) {
+        return [
+            new docx.Paragraph({
+                text: `${we["date"]}`,
+                heading: docx.HeadingLevel.HEADING_2,
+            }),
+            new docx.Paragraph({
+                children: [
+                    new docx.TextRun({
+                        text: we["position"],
+                        italics: true
+                    }),
+                    new docx.TextRun(`: ${we["company"]}`),
+                ],
+            }),
+            new docx.Paragraph({
+                text: we["responsibilities"][0],
+                bullet: {
+                    level: 0
+                },
+            }),
 
-                }),
-                new docx.Paragraph({
-                    children: [
-                        new docx.TextRun({
-                            text: we["position"],
-                            italics: true
-                        }),
-                        new docx.TextRun(`: ${we["company"]}`),
-                    ],
-                }),
-                new docx.Paragraph({
-                    text: we["responsibilities"][0],
-                    bullet: {
-                        level: 0
-                    },
-                }),
-                newLine(),
-            ];
-            return accumulator.concat(n);
-        },
-        []);
+            new docx.Paragraph({
+                children: [
+                    new docx.TextRun({
+                        text: we["technologies"],
+                        italics: true
+                    }),
+                ],
+                bullet: {
+                    level: 0
+                },
+            }),
+            newLine(),
+        ];
+    }
 
-
-    const config = {
+    return new docx.Document({
         sections: [
             {
                 properties: {},
-                children: l,
+                children: wl.reduce(function (accumulator, we) {
+                        return accumulator.concat(workDescription(we));
+                    },
+                    []),
             },
         ],
-    };
-    return new docx.Document(config);
+    });
 }
 
 async function readCV() {

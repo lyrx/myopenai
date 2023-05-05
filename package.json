@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "type": "module",
   "dependencies": {
+    "docx": "^8.0.4",
     "fs": "^0.0.1-security",
     "openai": "^3.2.1",
     "os": "^0.1.2",

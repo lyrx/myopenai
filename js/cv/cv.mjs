@@ -2,7 +2,53 @@ import {readFile} from "../json/jsonutils.mjs";
 import {isSubstringIgnoreCase, mylog, mylogObject} from "../util/common.mjs";
 import {project_home} from "../util/paths.mjs";
 import {monthsBetween, stringToDates} from "../util/dates.mjs";
+import fs from "fs";
+import docx from 'docx';
 
+
+function generateDocx() {
+    docx.Packer.toBuffer(asDocx()).then((buffer) => {
+        fs.writeFileSync("cv.docx", buffer);
+    });
+}
+
+
+function asDocx() {
+    return new docx.Document({
+        sections: [
+            {
+                properties: {},
+                children: [
+                    new docx.Paragraph({
+                        text: "Alexander Weinmann",
+                        heading: docx.HeadingLevel.HEADING_1,
+
+                    }),
+                    new docx.Paragraph({
+                        children: [
+                            new docx.TextRun("\n"),
+                        ],
+                    }),
+                    new docx.Paragraph({
+                        children: [
+                            new docx.TextRun("Hello World"),
+                            new docx.TextRun({
+                                text: "Foo Bar",
+                                bold: true,
+                            }),
+                            new docx.TextRun({
+                                text: "\tGithub is the best",
+                                bold: true,
+                            }),
+                        ],
+                    }),
+
+
+                ],
+            },
+        ],
+    });
+}
 
 async function readCV() {
     return readFile(`${project_home}/js/json/cv.json`)
@@ -36,7 +82,9 @@ function allSkills(workExperienceList) {
         return `${we["technologies"]},${accumulator}`;
     }, "");
 
-    const asList = allSkillsString.split(",").map((s)=>s.trim()).filter((s)=> {return (s.length > 1);});
+    const asList = allSkillsString.split(",").map((s) => s.trim()).filter((s) => {
+        return (s.length > 1);
+    });
 
 
     const uniqueList = [...new Set(asList)];
@@ -65,25 +113,22 @@ function pimpWorkExperience(workExperience) {
 }
 
 
-
-
-
 async function cvprompt(question) {
     const we = (await readCV_object())["work_experience"]
     const pimped = pimpWorkExperience(we)
     const all = allSkills(we);
-    const knowHow = all.reduce(function(acc, c) {
-        const skill = c;
-        const filteredBySkill = filterbySkill(pimped,skill)
-        const ids = filteredBySkill.reduce(function(acc, c) {
-            return `${c["index"]},${acc}`;
-        },"");
-      //  mylogObject(filteredBySkill);)
-        return `${acc}\n${c}: ${totalSkillMonthsAndYears(filteredBySkill)} (${ids})`
+    const knowHow = all.reduce(function (acc, c) {
+            const skill = c;
+            const filteredBySkill = filterbySkill(pimped, skill)
+            const ids = filteredBySkill.reduce(function (acc, c) {
+                return `${c["index"]},${acc}`;
+            }, "");
+            //  mylogObject(filteredBySkill);)
+            return `${acc}\n${c}: ${totalSkillMonthsAndYears(filteredBySkill)} (${ids})`
         }
-        ,"")
+        , "")
 
-  const vita =   pimped.reduce(function(acc, c) {
+    const vita = pimped.reduce(function (acc, c) {
         return `${acc}
 ${c["index"]}.) ${c["date"]}: ${c["position"]} bei "${c["company"]}": ${c["responsibilities"][0]}`
 
@@ -107,9 +152,8 @@ ${question}
 }
 
 
-
-export {
-    cvprompt
+export default {
+    cvprompt, asDocx,generateDocx
 };
 
 

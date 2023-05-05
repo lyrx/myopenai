@@ -1,13 +1,17 @@
-import {mylog, mylogObject, mylogWithTime} from "./common.mjs";
-
-import {
-     cvprompt
-} from "../cv/cv.mjs";
-
+import  fs from "fs";
+import docx  from 'docx';
+import cv from '../cv/cv.mjs'
+import {mylogWithTime} from "./common.mjs";
 
 
 
-mylog(await cvprompt("Was hast du 2013 gemacht?"))
+// Documents contain sections, you can have multiple sections per document, go here to learn more about sections
+// This simple example will only contain one section
+const doc = cv.generateDocx();
+
+
+
+// Done! A file called 'My Document.docx' will be in your file system.
 
 mylogWithTime("Finished!")
 

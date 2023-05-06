@@ -36,7 +36,7 @@ function myerrorWithTime(s) {
 
 const llog = {mylog, mylogObject,mylogWithTime,myerrorWithTime}
 
-export {
+export default {
     llog,
     zipWithIndex,
     isSubstringIgnoreCase

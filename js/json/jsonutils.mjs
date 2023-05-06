@@ -1,19 +1,19 @@
 import fs from 'fs/promises';
 import path from 'path';
 import {getCurrentDate_ddMMYYYY, getCurrentTime} from "../util/dates.mjs";
-import {llog} from "../util/common.mjs";
+import common from "../util/common.mjs";
 async function readFile(aFile) {
     try {
         // Check if the input file exists
         try {
             await fs.access(aFile);
         } catch (err) {
-            myerror(`Input file '${aFile}' does not exist.`);
+            common.llog.myerror(`Input file '${aFile}' does not exist.`);
             return;
         }
         return fs.readFile(aFile, 'utf8');
     } catch (err) {
-        myerror('Error:', err);
+        common.llog.myerror('Error:', err);
     }
 }
 
@@ -27,10 +27,10 @@ async function prettyPrintJson(data, outputFile) {
 
         // Write the pretty-printed JSON data to the output file
         await fs.writeFile(outputFile, prettyData, 'utf8');
-        llog.mylog(`Beendet um ${getCurrentTime()} Uhr am ${getCurrentDate_ddMMYYYY()}`)
+        common.llog.mylog(`Beendet um ${getCurrentTime()} Uhr am ${getCurrentDate_ddMMYYYY()}`)
 
     } catch (err) {
-        myerror('Error:', err);
+        common.llog.myerror('Error:', err);
     }
 }
 function stringifyPretty(data){
@@ -42,7 +42,7 @@ async function prettyPrint(dirString, sourceFileName) {
     const inputFile = path.join(dirString, sourceFileName);
     const outputFile = path.join(dirString, targetFileName.toString());
 
-    llog.mylog(`${inputFile} -> ${outputFile}`)
+    common.llog.mylog(`${inputFile} -> ${outputFile}`)
     const data = await readFile(inputFile)
     prettyPrintJson(data, outputFile)
 

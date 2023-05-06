@@ -1,5 +1,5 @@
 import {readFile} from "../json/jsonutils.mjs";
-import {isSubstringIgnoreCase, llog} from "../util/common.mjs";
+import common from "../util/common.mjs";
 import {project_home} from "../util/paths.mjs";
 import {monthsBetween, stringToDates} from "../util/dates.mjs";
 import fs from "fs";
@@ -94,7 +94,7 @@ function filterbySkill(workExperienceList, skill) {
     return workExperienceList.filter(
         function (we) {
             let subString = skill;
-            return isSubstringIgnoreCase(we["technologies"], subString);
+            return common.isSubstringIgnoreCase(we["technologies"], subString);
         }
     )
 }
@@ -168,7 +168,6 @@ async function cvprompt(question) {
             const ids = filteredBySkill.reduce(function (acc, c) {
                 return `${c["index"]},${acc}`;
             }, "");
-            //  mylogObject(filteredBySkill);)
             return `${acc}\n${c}: ${totalSkillMonthsAndYears(filteredBySkill)} (${ids})`
         }
         , "")

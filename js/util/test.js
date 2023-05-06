@@ -6,7 +6,7 @@ import {llog} from "./common.mjs";
 
 // Documents contain sections, you can have multiple sections per document, go here to learn more about sections
 // This simple example will only contain one section
-await cv.generateDocx();
+llog.mylog(await cv.cvprompt("Welche Erfahrungen hast Du mit Java?"));
 
 
 

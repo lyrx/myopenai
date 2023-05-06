@@ -132,9 +132,9 @@ function totalSkillMonthsAndYears(workExperienceList) {
 }
 
 
-function pimpWorkExperience(workExperience) {
+function pimpWorkExperience(workExperience,offset) {
     return workExperience.map(function (we, index) {
-        we.index = index + 1;
+        we.index = index + 1 + (typeof offset !== 'undefined' ? offset : 0);
         const [fromDate, toDate] = stringToDates(we["date"]);
         we.fromDate = fromDate;
         we.toDate = toDate;
@@ -144,14 +144,27 @@ function pimpWorkExperience(workExperience) {
     })
 }
 
+function genVita(aPimped){
+    return  aPimped.reduce(function (acc, c) {
+        return `${acc}
+${c["index"]}.) ${c["date"]}: ${c["position"]} bei "${c["company"]}": ${c["responsibilities"][0]}`
+
+    }, "");
+}
 
 async function cvprompt(question) {
-    const we = (await readCV_object())["work_experience"]
-    const pimped = pimpWorkExperience(we)
-    const all = allSkills(we);
-    const knowHow = all.reduce(function (acc, c) {
+    const alsSelbstaendiger = (await readCV_object())["work_experience"];
+    const alsAngestellter = (await readCV_object())["festanstellung"];
+
+    const pimpedAlsSelbstaendiger = pimpWorkExperience(alsSelbstaendiger,0);
+    const pimpedAlsAngestellter = pimpWorkExperience(alsAngestellter,pimpedAlsSelbstaendiger.length);
+
+    const pimpedAllPositions = pimpedAlsSelbstaendiger.concat(pimpedAlsAngestellter);
+    const allSkillsList = allSkills(pimpedAllPositions);
+
+    const knowHow = allSkillsList.reduce(function (acc, c) {
             const skill = c;
-            const filteredBySkill = filterbySkill(pimped, skill)
+            const filteredBySkill = filterbySkill(pimpedAllPositions, skill)
             const ids = filteredBySkill.reduce(function (acc, c) {
                 return `${c["index"]},${acc}`;
             }, "");
@@ -160,17 +173,19 @@ async function cvprompt(question) {
         }
         , "")
 
-    const vita = pimped.reduce(function (acc, c) {
-        return `${acc}
-${c["index"]}.) ${c["date"]}: ${c["position"]} bei "${c["company"]}": ${c["responsibilities"][0]}`
-
-    }, "");
-
+    const vitaAlsSelbstaendiger = genVita(pimpedAlsSelbstaendiger)
+    const vitaAlsAngestellter = genVita(pimpedAlsAngestellter)
 
     return `
 Dein Name ist Alexander Weinmann. Du bist IT-Consultant. Du bist am
-20.10.1965 geboren und 57 Jahre alt. Dies ist dein Lebenslauf:
-${vita}
+20.10.1965 geboren und 57 Jahre alt.
+
+Als freiberuflicher IT-Consultant:
+${vitaAlsSelbstaendiger}
+
+Als fest angestellter IT-Consultant:
+${vitaAlsAngestellter}
+
 
 Dein Know-How:
 ${knowHow}
@@ -185,7 +200,7 @@ ${question}
 
 
 export default {
-    cv
+    cvprompt, asDocx, generateDocx
 };
 
 

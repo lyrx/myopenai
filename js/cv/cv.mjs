@@ -185,7 +185,7 @@ ${question}
 
 
 export default {
-    cvprompt, asDocx, generateDocx
+    cv
 };
 
 

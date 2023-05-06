@@ -57,7 +57,7 @@
       "position": "Lead Developer",
       "responsibilities": [
         "Registrierung von Testamenten auf der Blockchain"],
-      "technologies": "Jenkins, AWS,  Bitbucket, Java, Linux, React,IPFS, SubtleCrypto, Docker, AWS, Linux, Scrum"
+      "technologies": "Jenkins, AWS,  Bitbucket, Java, Linux, React , IPFS, SubtleCrypto, Docker, AWS, Linux, Scrum"
     },
     {
       "date": "01.06.2018 – 31.12.2018",
@@ -65,7 +65,7 @@
       "position": "Technical Analyst",
       "responsibilities": [
         "Analyse und Dokumentation: ERP-Systems, SAP-Einführung"],
-      "technologies": "JBoss, JSP, Servlets, Struts, Spring, Scrum, Java, Javascript,JSF,Tomcat,Docker,Eclipse,React,Spring Boot,Oracle,Scrum"
+      "technologies": "JBoss, JSP, Servlets, Struts, Spring, Scrum, Java, Javascript , JSF , Tomcat , Docker , Eclipse , React , Spring Boot , Oracle , Scrum"
     },
     {
       "date": "01.06.2016 – 31.10.2017",
@@ -87,14 +87,14 @@
       "company": "Credit Suisse Zürich",
       "position": "Senior Solution Engineer",
       "responsibilities": ["Testautomatisierung, Buildmanagement"],
-      "technologies": "Teamcity, Maven, Jenkins, Webservices,JSF,Linux"
+      "technologies": "Teamcity, Maven, Jenkins, Webservices , JSF , Linux"
     },
     {
       "date": "01.05.2010 – 31.03.2013",
       "company": "Credit Suisse Zürich",
       "position": "Software Configuration Manager",
       "responsibilities": ["Applikationsverwaltung für die Anwendungen im Bereich Kreditrisiko"],
-      "technologies": "Teamcity, Maven, Jenkins, Webservices, JSF,Linux"
+      "technologies": "Teamcity, Maven, Jenkins, Webservices, JSF , Linux"
 
     },
     {
@@ -125,14 +125,14 @@
       "company": "SAP AG Berlin",
       "position": "Senior Developer",
       "responsibilities": ["MaxDB: Installationswerkzeuge"],
-      "technologies": "Perl, Java,Swing, SAP"
+      "technologies": "Perl, Java , Swing, SAP"
     },
     {
       "date": "01.08.2001 - 31.08.2003",
       "company": "Mummert Consulting Hamburg",
       "position": "IT-Consultant",
       "responsibilities": ["Vorgangsbearbeitungssystem der Polizei NRW: NIVADIS"],
-      "technologies": "XML, Java,Swing,  Jenkins, Maven, JProfiler"
+      "technologies": "XML, Java , Swing,  Jenkins, Maven, JProfiler"
     },
     {
       "date": "01.01.2001 - 31.07.2001",
@@ -153,7 +153,7 @@
       "company": "SAP AG Walldorf",
       "position": "Java-Developer",
       "responsibilities": ["Werkzeugs zur Oracle-DBA; \"SAPDBA\""],
-      "technologies": "Java,XML,Java,Oracle,SAP"
+      "technologies": "Java , XML , Java , Oracle , SAP"
     },
     {
       "date": "01.05.1996 - 30.04.1998",

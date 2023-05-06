@@ -1,5 +1,4 @@
-import  fs from "fs";
-import docx  from 'docx';
+
 import cv from '../cv/cv.mjs'
 import {llog} from "./common.mjs";
 

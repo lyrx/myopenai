@@ -7,14 +7,29 @@ import docx from 'docx';
 
 
 async function generateDocx() {
-    docx.Packer.toBuffer(await asDocx()).then((buffer) => {
-        fs.writeFileSync("cv.docx", buffer);
+    await generateDocxAndWriteFileInternal(await asDocx(),"cv.docx");
+    await generateDocxAndWriteFileInternal(await asDocxEnglish(),"cv-en.docx");
+}
+
+
+
+async function generateDocxAndWriteFileInternal(doc, fileNameToWrite) {
+    docx.Packer.toBuffer(doc).then((buffer) => {
+        fs.writeFileSync(fileNameToWrite, buffer);
     });
 }
 
 
+
 async function asDocx() {
-    const cv = await readCV_object();
+   return asDocxInternal(await readCV_object())
+}
+
+async function asDocxEnglish() {
+    return asDocxInternal(await readCV_objectEnglish())
+}
+async function asDocxInternal(cv) {
+
     const wl = cv.projects();
 
     function newLine() {
@@ -75,20 +90,37 @@ async function asDocx() {
     });
 }
 
-async function readCV() {
 
-    return readFile(`${project_home}/js/json/cv.json`)
+async function readCV() {
+    return readCVByFile(`${project_home}/js/json/cv.json`)
 }
 
-async function readCV_object() {
-    const p = await readCV();
+async function readCVEnglish() {
+    return readCVByFile(`${project_home}/js/json/cv-en.json`)
+}
 
+async function readCVByFile(fileName) {
+    return readFile(fileName)
+}
+
+
+async function readCV_object() {
+    return readCV_objectInternal(await readCV());
+}
+async function readCV_objectEnglish() {
+    return readCV_objectInternal(await readCVEnglish());
+}
+
+
+async function readCV_objectInternal(p) {
     const o = JSON.parse(p);
     o.projects = function () {
         return o["work_experience"]
     };
     return o;
 }
+
+
 
 function filterbySkill(workExperienceList, skill) {
     return workExperienceList.filter(

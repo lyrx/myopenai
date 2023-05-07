@@ -6,105 +6,109 @@
   "date_of_birth": "20.10.1965",
   "work_experience": [
     {
-      "date": "01.10.2021 – 31.12.2022",
+      "date": "01.10.2021 - 31.12.2022",
       "company": "SBB Bern",
-      "project": "Strukturauftrag Kundeninformation (SKI)",
-      "position": "Test-Manager",
+      "project": "Structure Contract Customer Information (CIP)",
+      "position": "Test Manager",
       "responsibilities": [
-        "CI/CD mit Openshift, ArgoCD",
-        "Pflege der eigenentwickelten Test-Engine"
+        "CI/CD with Openshift, ArgoCD",
+        "Maintenance of the self-developed test engine"
       ],
-      "technologies": "Jira, Jenkins, Intellij, Java, Spring, Confluence, Kafka, Openshift, Kubernetes, Helm, ArgoCD, Confluence,  Kubernetes"
+      "technologies": "Jira, Jenkins, Intellij, Java, Spring, Confluence, Kafka, Openshift, Kubernetes, Helm, ArgoCD, Confluence, Kubernetes"
     },
     {
-      "date": "01.01.2021 – 31.05.2021",
+      "date": "01.01.2021 - 31.05.2021",
       "company": "Bundesamt für Migration und Flüchtlinge Nürnberg",
-      "position": "Coach des Projektleiters",
+      "position": [
+        "Coach of the Project Manager"
+      ],
       "responsibilities": [
-        "Beratung des Projektleiters bei organisatorischen Fragen und Mitarbeiterführung"
+        "Advising the project manager on organisational issues and staff management"
       ],
       "technologies": "Jira, Sharepoint, Java, Node.js, Spring, Confluence"
     },
     {
-      "date": "01.08.2020 – 31.12.2020",
+      "date": "01.08.2020 - 31.12.2020",
       "company": "Helsana Versicherungen AG",
-      "position": "Performance-Analyst",
+      "position": "Performance Analyst",
       "responsibilities": [
-        "Koordination der Durchführung von Lasttests im Rahmen des Rollouts einer neuen Version von Adcubum Syrius"
+        "Coordination of the execution of load tests in the context of the rollout of a new version of Adcubum Syrius"
       ],
-      "technologies": "Jira, Sharepoint, NeoLoad, Splunk,  Confluence"
+      "technologies": "Jira, Sharepoint, NeoLoad, Splunk, Confluence"
     },
     {
-      "date": "01.02.2020 – 31.07.2020",
+      "date": "01.02.2020 - 31.07.2020",
       "company": "Adnovum Informatik AG Zürich",
-      "position": "Senior Java-Developer",
+      "position": "Senior Java Developer",
       "project": "RM-Portal VP-Bank Liechtenstein",
       "responsibilities": [
-        "Entwicklung eines neuen Customer-Relationship-Management-Portals für die VP-Bank Liechtenstein"
+        "Development of a new customer relationship management portal for VP-Bank Liechtenstein"
       ],
       "technologies": "Java, Spring, Kafka, Swagger, Intellij, Junit, Jira, Bitbucket, Jira, Scrum"
     },
     {
-      "date": "01.09.2019 – 30.11.2019",
+      "date": "01.09.2019 - 30.11.2019",
       "company": "Kantonspolizei St Gallen",
-      "position": "Senior Java-Consultant",
-      "project": "Entwicklungsumgebung und Testautomatisierung für die Erstellung von Wordvorlagen",
+      "position": "Senior Java Consultant",
+      "project": "Development Environment and Test Automation for Word Template Creation",
       "responsibilities": [
-        "Analyse und Test des Vorgangsbearbeitungssystems (LogObject)."
+        "Analysis and test of the transaction processing system (LogObject)."
       ],
-      "technologies": "Jenkins, Java, Eclipse, Linux"
+      "technologies": "Jenkins,Java,Eclipse,Linux"
     },
     {
-      "date": "01.03.2019 – 31.08.2019",
-      "company": "Eternitas Zürich",
+      "date": [
+        "01.03.2019 - 31.08.2019"
+      ],
+      "company": "Eternitas Zurich",
       "position": "Lead Developer",
       "responsibilities": [
-        "Registrierung von Testamenten auf der Blockchain"
+        "Registration of wills on the blockchain"
       ],
-      "technologies": "Jenkins, AWS,  Bitbucket, Java, Linux, React , IPFS, SubtleCrypto, Docker, AWS, Linux, Scrum"
+      "technologies": "Jenkins, AWS, Bitbucket, Java, Linux, React , IPFS, SubtleCrypto, Docker, AWS, Linux, Scrum"
     },
     {
-      "date": "01.06.2018 – 31.12.2018",
-      "company": "Galexis  Niederbipp",
+      "date": "01.06.2018 - 1231.12.2018",
+      "company": "Galexis Niederbipp",
       "position": "Technical Analyst",
       "responsibilities": [
-        "Analyse und Dokumentation: ERP-Systems, SAP-Einführung"
+        "Analysis and documentation: ERP systems, SAP implementation"
       ],
       "technologies": "JBoss, JSP, Servlets, Struts, Spring, Scrum, Java, Javascript , JSF , Tomcat , Docker , Eclipse , React , Spring Boot , Oracle , Scrum"
     },
     {
-      "date": "01.06.2016 – 31.10.2017",
+      "date": "01.06.2016 - 31.10.2017",
       "company": "Adnovum Informatik AG Zürich",
       "position": "Senior Development Engineer",
       "responsibilities": [
-        "\"Asset-View\", Depotdatenverwaltung"
+        "Asset View UBS: portfolio data management"
       ],
-      "technologies": "Scrum, Intellij, Bitbucket, Jira, Struts,  Java, Javascript, JSP, JSF, Oracle, Linux"
+      "technologies": "Scrum, Intellij, Bitbucket, Jira, Struts, Java, Javascript, JSP, JSF, Oracle, Linux"
     },
     {
       "date": "01.05.2014 - 30.06.2015",
       "company": "AXA Winterthur",
       "position": "DevOPS",
       "responsibilities": [
-        "Automatische Deployments Fahrzeugversicherung"
+        "Automated Deployments Vehicle Insurance"
       ],
-      "technologies": "Scrum, Jenkins, Maven, Groovy, Selenium, Jira,  JProfiler, Dynatrace, Intellij, Javascript, JBoss, Spring Boot"
+      "technologies": "Scrum, Jenkins, Maven, Groovy, Selenium, Jira, JProfiler, Dynatrace, Intellij, Javascript, JBoss, Spring Boot"
     },
     {
-      "date": "01.04.2013 – 31.12.2013",
-      "company": "Credit Suisse Zürich",
+      "date": "01.04.2013 - 31.12.2013",
+      "company": "Credit Suisse Zurich",
       "position": "Senior Solution Engineer",
       "responsibilities": [
-        "Testautomatisierung, Buildmanagement"
+        "Test automation, build management"
       ],
       "technologies": "Teamcity, Maven, Jenkins, Webservices , JSF , Linux"
     },
     {
-      "date": "01.05.2010 – 31.03.2013",
-      "company": "Credit Suisse Zürich",
+      "date": "01.05.2010 - 31.03.2013",
+      "company": "Credit Suisse Zurich",
       "position": "Software Configuration Manager",
       "responsibilities": [
-        "Applikationsverwaltung für die Anwendungen im Bereich Kreditrisiko"
+        "Application Management for Credit Risk Applications"
       ],
       "technologies": "Teamcity, Maven, Jenkins, Webservices, JSF , Linux"
     },
@@ -113,25 +117,27 @@
       "company": "Commerzbank Frankfurt",
       "position": "Software Configuration Manager",
       "responsibilities": [
-        "Buildmanagement im Projekt KP 2.0"
+        "Build Management in Project KP 2.0"
       ],
-      "technologies": "Jenkins, Maven,   Perl, Javascript"
+      "technologies": "Jenkins, Maven, Perl, Javascript"
     },
     {
       "date": "01.10.2007 - 30.11.2008",
-      "company": "SwissLife Zürich",
+      "company": "SwissLife Zurich",
       "position": "Senior Java Developer",
       "responsibilities": [
-        "Vertragsverwaltung von Lebensversicherungen"
+        "Life Insurance Contract Administration"
       ],
-      "technologies": "Java, Eclipse,  XML, Java"
+      "technologies": "Java, Eclipse, XML, Java"
     },
     {
-      "date": "01.10.2007 - 31.12.2007",
+      "date": [
+        "01.10.2007 - 31.12.2007"
+      ],
       "company": "lyrx GmbH Zürich",
-      "position": "Geschäftsführer",
+      "position": "Managing Director",
       "responsibilities": [
-        "Aufbau Geschäftstätigkeit lyrx GmbH"
+        "Business Development lyrx GmbH"
       ],
       "technologies": ""
     }

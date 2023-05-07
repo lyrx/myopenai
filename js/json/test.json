@@ -1,0 +1,74 @@
+{
+  "Free trial users": {
+    "Text & Embedding": {
+      "RPM": 3,
+      "TPM": 150000
+    },
+    "Chat": {
+      "RPM": 3,
+      "TPM": 40000
+    },
+    "Codex": {
+      "RPM": 3,
+      "TPM": 40000
+    },
+    "Edit": {
+      "RPM": 3,
+      "TPM": 150000
+    },
+    "Image": {
+      "images_per_minute": 5
+    },
+    "Audio": {
+      "RPM": 3
+    }
+  },
+  "Pay-as-you-go users (first 48 hours)": {
+    "Text & Embedding": {
+      "RPM": 60,
+      "TPM": 250000
+    },
+    "Chat": {
+      "RPM": 60,
+      "TPM": 60000
+    },
+    "Codex": {
+      "RPM": 20,
+      "TPM": 40000
+    },
+    "Edit": {
+      "RPM": 20,
+      "TPM": 150000
+    },
+    "Image": {
+      "images_per_minute": 50
+    },
+    "Audio": {
+      "RPM": 50
+    }
+  },
+  "Pay-as-you-go users (after 48 hours)": {
+    "Text & Embedding": {
+      "RPM": 3500,
+      "TPM": 350000
+    },
+    "Chat": {
+      "RPM": 3500,
+      "TPM": 90000
+    },
+    "Codex": {
+      "RPM": 20,
+      "TPM": 40000
+    },
+    "Edit": {
+      "RPM": 20,
+      "TPM": 150000
+    },
+    "Image": {
+      "images_per_minute": 50
+    },
+    "Audio": {
+      "RPM": 50
+    }
+  }
+}

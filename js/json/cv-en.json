@@ -1,0 +1,199 @@
+{
+  "name": "Alexander Weinmann",
+  "address": "Weidstrasse 8, CH-8122 Binz",
+  "phone": "+41 (0)76 257 69 61",
+  "desired_position": "IT-Consultant",
+  "date_of_birth": "20.10.1965",
+  "work_experience": [
+    {
+      "date": "01.10.2021 – 31.12.2022",
+      "company": "SBB Bern",
+      "project": "Strukturauftrag Kundeninformation (SKI)",
+      "position": "Test-Manager",
+      "responsibilities": [
+        "CI/CD mit Openshift, ArgoCD",
+        "Pflege der eigenentwickelten Test-Engine"
+      ],
+      "technologies": "Jira, Jenkins, Intellij, Java, Spring, Confluence, Kafka, Openshift, Kubernetes, Helm, ArgoCD, Confluence,  Kubernetes"
+    },
+    {
+      "date": "01.01.2021 – 31.05.2021",
+      "company": "Bundesamt für Migration und Flüchtlinge Nürnberg",
+      "position": "Coach des Projektleiters",
+      "responsibilities": [
+        "Beratung des Projektleiters bei organisatorischen Fragen und Mitarbeiterführung"
+      ],
+      "technologies": "Jira, Sharepoint, Java, Node.js, Spring, Confluence"
+    },
+    {
+      "date": "01.08.2020 – 31.12.2020",
+      "company": "Helsana Versicherungen AG",
+      "position": "Performance-Analyst",
+      "responsibilities": [
+        "Koordination der Durchführung von Lasttests im Rahmen des Rollouts einer neuen Version von Adcubum Syrius"
+      ],
+      "technologies": "Jira, Sharepoint, NeoLoad, Splunk,  Confluence"
+    },
+    {
+      "date": "01.02.2020 – 31.07.2020",
+      "company": "Adnovum Informatik AG Zürich",
+      "position": "Senior Java-Developer",
+      "project": "RM-Portal VP-Bank Liechtenstein",
+      "responsibilities": [
+        "Entwicklung eines neuen Customer-Relationship-Management-Portals für die VP-Bank Liechtenstein"
+      ],
+      "technologies": "Java, Spring, Kafka, Swagger, Intellij, Junit, Jira, Bitbucket, Jira, Scrum"
+    },
+    {
+      "date": "01.09.2019 – 30.11.2019",
+      "company": "Kantonspolizei St Gallen",
+      "position": "Senior Java-Consultant",
+      "project": "Entwicklungsumgebung und Testautomatisierung für die Erstellung von Wordvorlagen",
+      "responsibilities": [
+        "Analyse und Test des Vorgangsbearbeitungssystems (LogObject)."
+      ],
+      "technologies": "Jenkins, Java, Eclipse, Linux"
+    },
+    {
+      "date": "01.03.2019 – 31.08.2019",
+      "company": "Eternitas Zürich",
+      "position": "Lead Developer",
+      "responsibilities": [
+        "Registrierung von Testamenten auf der Blockchain"
+      ],
+      "technologies": "Jenkins, AWS,  Bitbucket, Java, Linux, React , IPFS, SubtleCrypto, Docker, AWS, Linux, Scrum"
+    },
+    {
+      "date": "01.06.2018 – 31.12.2018",
+      "company": "Galexis  Niederbipp",
+      "position": "Technical Analyst",
+      "responsibilities": [
+        "Analyse und Dokumentation: ERP-Systems, SAP-Einführung"
+      ],
+      "technologies": "JBoss, JSP, Servlets, Struts, Spring, Scrum, Java, Javascript , JSF , Tomcat , Docker , Eclipse , React , Spring Boot , Oracle , Scrum"
+    },
+    {
+      "date": "01.06.2016 – 31.10.2017",
+      "company": "Adnovum Informatik AG Zürich",
+      "position": "Senior Development Engineer",
+      "responsibilities": [
+        "\"Asset-View\", Depotdatenverwaltung"
+      ],
+      "technologies": "Scrum, Intellij, Bitbucket, Jira, Struts,  Java, Javascript, JSP, JSF, Oracle, Linux"
+    },
+    {
+      "date": "01.05.2014 - 30.06.2015",
+      "company": "AXA Winterthur",
+      "position": "DevOPS",
+      "responsibilities": [
+        "Automatische Deployments Fahrzeugversicherung"
+      ],
+      "technologies": "Scrum, Jenkins, Maven, Groovy, Selenium, Jira,  JProfiler, Dynatrace, Intellij, Javascript, JBoss, Spring Boot"
+    },
+    {
+      "date": "01.04.2013 – 31.12.2013",
+      "company": "Credit Suisse Zürich",
+      "position": "Senior Solution Engineer",
+      "responsibilities": [
+        "Testautomatisierung, Buildmanagement"
+      ],
+      "technologies": "Teamcity, Maven, Jenkins, Webservices , JSF , Linux"
+    },
+    {
+      "date": "01.05.2010 – 31.03.2013",
+      "company": "Credit Suisse Zürich",
+      "position": "Software Configuration Manager",
+      "responsibilities": [
+        "Applikationsverwaltung für die Anwendungen im Bereich Kreditrisiko"
+      ],
+      "technologies": "Teamcity, Maven, Jenkins, Webservices, JSF , Linux"
+    },
+    {
+      "date": "01.04.2009 - 31.02.2010",
+      "company": "Commerzbank Frankfurt",
+      "position": "Software Configuration Manager",
+      "responsibilities": [
+        "Buildmanagement im Projekt KP 2.0"
+      ],
+      "technologies": "Jenkins, Maven,   Perl, Javascript"
+    },
+    {
+      "date": "01.10.2007 - 30.11.2008",
+      "company": "SwissLife Zürich",
+      "position": "Senior Java Developer",
+      "responsibilities": [
+        "Vertragsverwaltung von Lebensversicherungen"
+      ],
+      "technologies": "Java, Eclipse,  XML, Java"
+    },
+    {
+      "date": "01.10.2007 - 31.12.2007",
+      "company": "lyrx GmbH Zürich",
+      "position": "Geschäftsführer",
+      "responsibilities": [
+        "Aufbau Geschäftstätigkeit lyrx GmbH"
+      ],
+      "technologies": ""
+    }
+  ],
+  "festanstellung": [
+    {
+      "date": "01.09.2003 - 30.11.2006",
+      "company": "SAP AG Berlin",
+      "position": "Senior Developer",
+      "responsibilities": [
+        "MaxDB: Installation Tools"
+      ],
+      "technologies": "Perl, Java , Swing, SAP"
+    },
+    {
+      "date": "01.08.2001 - 31.08.2003",
+      "company": "Mummert Consulting Hamburg",
+      "position": "IT-Consultant",
+      "responsibilities": [
+        "Vorgangsbearbeitungssystem der Polizei NRW: NIVADIS"
+      ],
+      "technologies": "XML, Java , Swing, Jenkins, Maven, JProfiler"
+    },
+    {
+      "date": "01.01.2001 - 31.07.2001",
+      "company": "abaXX AG Stuttgart",
+      "position": "Software Engineer Training",
+      "responsibilities": [
+        "abaXX EJB Components: Training Environment"
+      ],
+      "technologies": "Java"
+    },
+    {
+      "date": [
+        "01.09.1999 - 31.12.2000"
+      ],
+      "company": "BCT AG Willstädt",
+      "position": "Java-Developer",
+      "responsibilities": [
+        "BCT Portal for Mechanical Engineers"
+      ],
+      "technologies": "Java, Perl, MySQL, XML"
+    },
+    {
+      "date": [
+        "01.05.1998 - 31.08.1999"
+      ],
+      "company": "SAP AG Walldorf",
+      "position": "Java Developer",
+      "responsibilities": [
+        "Tools for Oracle DBA; \"SAPDBA\""
+      ],
+      "technologies": "Java , XML , Java , Oracle , SAP"
+    },
+    {
+      "date": "01.05.1996 - 30.04.1998",
+      "company": "SAP AG Walldorf",
+      "position": "Student Employee",
+      "responsibilities": [
+        "Installation and Migration Tests for SAP R/3 on UNIX"
+      ],
+      "technologies": "Oracle, Linux, Java"
+    }
+  ]
+}

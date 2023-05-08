@@ -1,9 +1,10 @@
 import common from "./common.mjs";
 import prompts from "../json/prompts.mjs";
+import openai from "../openai/openai.mjs";
 
 
 
-common.llog.mylog(prompts.heypi)
+await openai.helloWorldChatCompletion();
 
 
 

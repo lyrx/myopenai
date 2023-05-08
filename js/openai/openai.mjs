@@ -10,7 +10,7 @@ const configuration = new Configuration({
 const openai = new OpenAIApi(configuration);
 
 
-async function cvRequest(question){
+async function cvRequest(question) {
     const response = await openai.createCompletion({
         model: "text-davinci-003",
         prompt: await cv.cvprompt(question),
@@ -21,11 +21,26 @@ async function cvRequest(question){
         presence_penalty: 0.0,
     });
 
-    common.llog.mylog(`Q: ${question}
-A:${response.data.choices[0].text}
 
-${JSON.stringify(response.data.usage,null,2)}`);
+    common.llog.mylogObject(response);
 
+
+    common.llog.mylogObject(response.data.usage);
 }
 
-export default { cvRequest };
+
+async function helloWorldChatCompletion() {
+
+    const completion = await openai.createChatCompletion({
+        model: "gpt-3.5-turbo",
+        messages: [
+            {role: "user", content: "Hello world"},
+        ],
+    });
+
+    common.llog.mylogObject(completion.data.choices[0]);
+    common.llog.mylogObject(completion.data.usage);
+}
+
+
+export default {cvRequest, helloWorldChatCompletion};

@@ -14,7 +14,7 @@ function myerror(s) {
 }
 
 function mylogObject(o) {
-    console.error(JSON.stringify(o,null,2));
+    console.error("Object: "+JSON.stringify(o,null,2));
 }
 
 

@@ -11,8 +11,8 @@
       "project": "Structure Contract Customer Information (CIP)",
       "position": "Test Manager",
       "responsibilities": [
-        "CI/CD with Openshift, ArgoCD",
-        "Maintenance of the self-developed test engine"
+        "Streamlined CI/CD processes using Openshift and ArgoCD",
+        "Achieved faster deployment times and reduced error rates"
       ],
       "technologies": "Jira, Jenkins, Intellij, Java, Spring, Confluence, Kafka, Openshift, Kubernetes, Helm, ArgoCD, Confluence, Kubernetes"
     },
@@ -20,10 +20,11 @@
       "date": "01.01.2021 - 31.05.2021",
       "company": "Bundesamt für Migration und Flüchtlinge Nürnberg",
       "position": [
-        "Coach of the Project Manager"
+        "Project Leader Coach"
       ],
       "responsibilities": [
-        "Advising the project manager on organisational issues and staff management"
+        "Advised the project leader on organizational matters and employee management",
+        "Improved team efficiency and communication, leading to higher project success rates"
       ],
       "technologies": "Jira, Sharepoint, Java, Node.js, Spring, Confluence"
     },
@@ -32,7 +33,8 @@
       "company": "Helsana Versicherungen AG",
       "position": "Performance Analyst",
       "responsibilities": [
-        "Coordination of the execution of load tests in the context of the rollout of a new version of Adcubum Syrius"
+        "Coordinated and executed performance tests for the rollout of a new version of Adcubum Syrius",
+        "Ensured optimal system performance and stability, resulting in a seamless transition for end users"
       ],
       "technologies": "Jira, Sharepoint, NeoLoad, Splunk, Confluence"
     },
@@ -42,19 +44,10 @@
       "position": "Senior Java Developer",
       "project": "RM-Portal VP-Bank Liechtenstein",
       "responsibilities": [
-        "Development of a new customer relationship management portal for VP-Bank Liechtenstein"
+        "Developed a new customer relationship management portal for VP-Bank Liechtenstein",
+        "Enhanced user experience and streamlined client communication, leading to increased customer satisfaction"
       ],
       "technologies": "Java, Spring, Kafka, Swagger, Intellij, Junit, Jira, Bitbucket, Jira, Scrum"
-    },
-    {
-      "date": "01.09.2019 - 30.11.2019",
-      "company": "Kantonspolizei St Gallen",
-      "position": "Senior Java Consultant",
-      "project": "Development Environment and Test Automation for Word Template Creation",
-      "responsibilities": [
-        "Analysis and test of the transaction processing system (LogObject)."
-      ],
-      "technologies": "Jenkins,Java,Eclipse,Linux"
     },
     {
       "date": [
@@ -63,7 +56,8 @@
       "company": "Eternitas Zurich",
       "position": "Lead Developer",
       "responsibilities": [
-        "Registration of wills on the blockchain"
+        "Implemented a blockchain-based solution for registering testaments",
+        "Increased transparency and security, revolutionizing the testament registration process"
       ],
       "technologies": "Jenkins, AWS, Bitbucket, Java, Linux, React , IPFS, SubtleCrypto, Docker, AWS, Linux, Scrum"
     },
@@ -72,7 +66,8 @@
       "company": "Galexis Niederbipp",
       "position": "Technical Analyst",
       "responsibilities": [
-        "Analysis and documentation: ERP systems, SAP implementation"
+        "Analyzed and documented ERP systems and SAP implementation",
+        "Provided actionable insights to streamline processes and increase efficiency across the organization"
       ],
       "technologies": "JBoss, JSP, Servlets, Struts, Spring, Scrum, Java, Javascript , JSF , Tomcat , Docker , Eclipse , React , Spring Boot , Oracle , Scrum"
     },
@@ -81,7 +76,8 @@
       "company": "Adnovum Informatik AG Zürich",
       "position": "Senior Development Engineer",
       "responsibilities": [
-        "Asset View UBS: portfolio data management"
+        "Developed and improved \"Asset-View,\" a depot data management system",
+        "Facilitated easier data access and management, leading to improved decision-making and resource allocation"
       ],
       "technologies": "Scrum, Intellij, Bitbucket, Jira, Struts, Java, Javascript, JSP, JSF, Oracle, Linux"
     },
@@ -90,7 +86,8 @@
       "company": "AXA Winterthur",
       "position": "DevOPS",
       "responsibilities": [
-        "Automated Deployments Vehicle Insurance"
+        "Automated deployments for vehicle insurance systems",
+        "Increased deployment speed and reduced errors, resulting in a more efficient and stable system"
       ],
       "technologies": "Scrum, Jenkins, Maven, Groovy, Selenium, Jira, JProfiler, Dynatrace, Intellij, Javascript, JBoss, Spring Boot"
     },
@@ -99,7 +96,8 @@
       "company": "Credit Suisse Zurich",
       "position": "Senior Solution Engineer",
       "responsibilities": [
-        "Test automation, build management"
+        "Implemented test automation and improved build management",
+        "Streamlined testing processes and reduced time to release for internal application releases"
       ],
       "technologies": "Teamcity, Maven, Jenkins, Webservices , JSF , Linux"
     },
@@ -108,7 +106,8 @@
       "company": "Credit Suisse Zurich",
       "position": "Software Configuration Manager",
       "responsibilities": [
-        "Application Management for Credit Risk Applications"
+        "Managed application configurations for credit risk systems",
+        "Ensured consistent and reliable configurations, minimizing errors and system downtime"
       ],
       "technologies": "Teamcity, Maven, Jenkins, Webservices, JSF , Linux"
     },
@@ -117,7 +116,8 @@
       "company": "Commerzbank Frankfurt",
       "position": "Software Configuration Manager",
       "responsibilities": [
-        "Build Management in Project KP 2.0"
+        "Oversaw build management for KP 2.0 project",
+        "Optimized build processes and facilitated faster, more reliable application releases"
       ],
       "technologies": "Jenkins, Maven, Perl, Javascript"
     },
@@ -126,7 +126,8 @@
       "company": "SwissLife Zurich",
       "position": "Senior Java Developer",
       "responsibilities": [
-        "Life Insurance Contract Administration"
+        "Developed a life insurance contract management system",
+        "Improved contract processing and data accuracy, enhancing customer service and satisfaction"
       ],
       "technologies": "Java, Eclipse, XML, Java"
     },
@@ -137,7 +138,8 @@
       "company": "lyrx GmbH Zürich",
       "position": "Managing Director",
       "responsibilities": [
-        "Business Development lyrx GmbH"
+        "Established and managed the operations of lyrx GmbH",
+        "Successfully launched the company and secured initial client engagements"
       ],
       "technologies": ""
     }

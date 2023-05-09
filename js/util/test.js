@@ -1,11 +1,13 @@
 import common from "./common.mjs";
 import prompts from "../json/prompts.mjs";
 import openai from "../openai/openai.mjs";
+import cv from "../cv/cv.mjs"
 
 
 
-await openai.helloWorldChatCompletion();
+//common.llog.mylog(await cv.skillString(false));
 
+common.llog.mylog(await cv.cvprompt("sdffsd"));
 
 
 

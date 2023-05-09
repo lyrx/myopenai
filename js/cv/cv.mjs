@@ -22,13 +22,13 @@ async function generateDocxAndWriteFileInternal(doc, fileNameToWrite) {
 
 
 async function asDocx() {
-   return asDocxInternal(await readCV_object())
+   return asDocxInternal(await readCV_object(),false)
 }
 
 async function asDocxEnglish() {
-    return asDocxInternal(await readCV_objectEnglish())
+    return asDocxInternal(await readCV_objectEnglish(),true)
 }
-async function asDocxInternal(cv) {
+async function asDocxInternal(cv,isEnglish) {
 
     const wl = cv.projects();
 
@@ -43,32 +43,18 @@ async function asDocxInternal(cv) {
     function workDescription(we) {
         return [
             new docx.Paragraph({
-                text: `${we["date"]}`,
+                text: `${we["company"]}: ${we["position"]} (${we["date"]})`,
                 heading: docx.HeadingLevel.HEADING_2,
             }),
+            newLine(),
             new docx.Paragraph({
-                children: [
-                    new docx.TextRun({
-                        text: we["position"],
-                        italics: true
-                    }),
-                    new docx.TextRun(`: ${we["company"]}`),
-                ],
-            }),
-            new docx.Paragraph({
-                text: we["responsibilities"][0],
+                text: we["responsibilities"][1],
                 bullet: {
                     level: 0
                 },
             }),
-
             new docx.Paragraph({
-                children: [
-                    new docx.TextRun({
-                        text: we["technologies"],
-                        italics: true
-                    }),
-                ],
+                text: we["responsibilities"][0],
                 bullet: {
                     level: 0
                 },
@@ -84,7 +70,17 @@ async function asDocxInternal(cv) {
                 children: wl.reduce(function (accumulator, we) {
                         return accumulator.concat(workDescription(we));
                     },
-                    []),
+                    []).concat([
+                    new docx.Paragraph({
+                        text: isEnglish ? `Technical Skills` : "Technische Skills",
+                        heading: docx.HeadingLevel.HEADING_1,
+                    }),
+                    new docx.Paragraph({
+                        text: isEnglish ? `` : ``,
+
+                    }),
+
+                ]),
             },
         ],
     });
@@ -184,6 +180,27 @@ ${c["index"]}.) ${c["date"]}: ${c["position"]} bei "${c["company"]}": ${c["respo
     }, "");
 }
 
+async function skillString(isEnglish){
+    const {pimpedAlsSelbstaendiger,pimpedAlsAngestellter,pimpedAllPositions,allSkillsList} =
+        skillsAndExperience(isEnglish);
+}
+async function skillsAndExperience(isEnglish){
+    const aCVObject = await ( isEnglish ? ( readCV_objectEnglish()): ( readCV_object()));
+    const alsSelbstaendiger = aCVObject["work_experience"];
+    const alsAngestellter = aCVObject["festanstellung"];
+
+    const pimpedAlsSelbstaendiger = pimpWorkExperience(alsSelbstaendiger,0);
+    const pimpedAlsAngestellter = pimpWorkExperience(alsAngestellter,pimpedAlsSelbstaendiger.length);
+
+    const pimpedAllPositions = pimpedAlsSelbstaendiger.concat(pimpedAlsAngestellter);
+    const allSkillsList = allSkills(pimpedAllPositions);
+    return {
+        pimpedAlsSelbstaendiger,pimpedAlsAngestellter,pimpedAllPositions,allSkillsList
+    };
+}
+
+
+
 async function cvprompt(question) {
     const alsSelbstaendiger = (await readCV_object())["work_experience"];
     const alsAngestellter = (await readCV_object())["festanstellung"];
@@ -231,7 +248,7 @@ ${question}
 
 
 export default {
-    cvprompt, asDocx, generateDocx
+    cvprompt, asDocx, generateDocx,skillString
 };
 
 

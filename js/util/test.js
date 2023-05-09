@@ -5,9 +5,9 @@ import cv from "../cv/cv.mjs"
 
 
 
-//common.llog.mylog(await cv.skillString(false));
+common.llog.mylog(await cv.skillString(true));
 
-common.llog.mylog(await cv.cvprompt("sdffsd"));
+//common.llog.mylog(await cv.cvprompt("sdffsd"));
 
 
 

@@ -76,7 +76,7 @@ async function asDocxInternal(cv,isEnglish) {
                         heading: docx.HeadingLevel.HEADING_1,
                     }),
                     new docx.Paragraph({
-                        text: isEnglish ? `` : ``,
+                        text: `${await skillString(isEnglish)}`,
 
                     }),
 
@@ -152,11 +152,11 @@ function allSkills(workExperienceList) {
 }
 
 
-function totalSkillMonthsAndYears(workExperienceList) {
+function totalSkillMonthsAndYears(workExperienceList,isEnglish) {
     let sum = totalSkillMonths(workExperienceList);
     let years = Math.floor(sum / 12);
     let months = sum % 12
-    return years > 0 ? `${years} Jahre, ${months} Monate` : `${sum} Monate`
+    return years > 0 ? `${years} ${isEnglish ? 'years' : 'Jahre' }, ${months}  ${isEnglish ? 'months' : 'Monate' }` : `${sum} ${isEnglish ? 'months' : 'Monate' }`
 }
 
 
@@ -182,12 +182,21 @@ ${c["index"]}.) ${c["date"]}: ${c["position"]} bei "${c["company"]}": ${c["respo
 
 async function skillString(isEnglish){
     const {pimpedAlsSelbstaendiger,pimpedAlsAngestellter,pimpedAllPositions,allSkillsList} =
-        skillsAndExperience(isEnglish);
+        await skillsAndExperience(isEnglish);
+
+    return allSkillsList.reduce(function (acc, c) {
+            const skill = c;
+            const filteredBySkill = filterbySkill(pimpedAllPositions, skill)
+
+            return `${acc}${c} (${totalSkillMonthsAndYears(filteredBySkill,isEnglish)}),`
+        }
+        , "")
 }
 async function skillsAndExperience(isEnglish){
     const aCVObject = await ( isEnglish ? ( readCV_objectEnglish()): ( readCV_object()));
     const alsSelbstaendiger = aCVObject["work_experience"];
     const alsAngestellter = aCVObject["festanstellung"];
+
 
     const pimpedAlsSelbstaendiger = pimpWorkExperience(alsSelbstaendiger,0);
     const pimpedAlsAngestellter = pimpWorkExperience(alsAngestellter,pimpedAlsSelbstaendiger.length);
@@ -201,15 +210,9 @@ async function skillsAndExperience(isEnglish){
 
 
 
-async function cvprompt(question) {
-    const alsSelbstaendiger = (await readCV_object())["work_experience"];
-    const alsAngestellter = (await readCV_object())["festanstellung"];
-
-    const pimpedAlsSelbstaendiger = pimpWorkExperience(alsSelbstaendiger,0);
-    const pimpedAlsAngestellter = pimpWorkExperience(alsAngestellter,pimpedAlsSelbstaendiger.length);
-
-    const pimpedAllPositions = pimpedAlsSelbstaendiger.concat(pimpedAlsAngestellter);
-    const allSkillsList = allSkills(pimpedAllPositions);
+async function cvprompt(question,isEnglish) {
+    const {pimpedAlsSelbstaendiger,pimpedAlsAngestellter,pimpedAllPositions,allSkillsList} =
+       await  skillsAndExperience(isEnglish);
 
     const knowHow = allSkillsList.reduce(function (acc, c) {
             const skill = c;

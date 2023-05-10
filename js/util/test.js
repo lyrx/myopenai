@@ -5,9 +5,9 @@ import cv from "../cv/cv.mjs"
 
 
 
-common.llog.mylog(await cv.skillString(true));
+//common.llog.mylog(await cv.softSkillString(true));
 
-//common.llog.mylog(await cv.cvprompt("sdffsd"));
+common.llog.mylog(await cv.cvprompt("Wo hast du Erfahrungen im Projektmanagement?"));
 
 
 

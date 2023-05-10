@@ -1,51 +1,30 @@
 import  fs from "fs";
 import docx  from 'docx';
+import cv from "../cv/cv.mjs"
+import common from "./common.mjs";
 
 
-
-
-// Documents contain sections, you can have multiple sections per document, go here to learn more about sections
-// This simple example will only contain one section
-const doc = new docx.Document({
-    sections: [
-        {
-            properties: {},
-            children: [
-                new docx.Paragraph({
-                    text: "Alexander Weinmann",
-                    heading: docx.HeadingLevel.HEADING_1,
-
-                }),
-                new docx.Paragraph({
-                    children: [
-                        new docx.TextRun("\n"),
-                    ],
-                }),
-                new docx.Paragraph({
-                    children: [
-                        new docx.TextRun("Hello World"),
-                        new docx.TextRun({
-                            text: "Foo Bar",
-                            bold: true,
-                        }),
-                        new docx.TextRun({
-                            text: "\tGithub is the best",
-                            bold: true,
-                        }),
-                    ],
-                }),
-
-
-
-
-            ],
-        },
-    ],
+const deutsch = `
+Projektmanagement, Testmanagement, Prozessoptimierung, Teamwork und Zusammenarbeit,
+Change Management, Technische Analysen, Softwareentwicklung, DevOps, IT-Beratung EDV Beratung,
+Softwarearchitektur, Anwendungsmanagement, Datenbanken
+`.split(",").map((s) => s.trim()).filter((s) => {
+    return (s.length > 1);
 });
 
-// Used to export the file into a .docx file
-docx.Packer.toBuffer(doc).then((buffer) => {
-    fs.writeFileSync("My Document.docx", buffer);
+const englisch = `
+
+Project Management, Test Management, Process Improvement, Teamwork and Collaboration,
+Change Management, Technical Analysis, Software Development, DevOps, 
+IT-Consulting Technical Consulting,Software Architecture,Application Management,Databases
+
+`.split(",").map((s) => s.trim()).filter((s) => {
+    return (s.length > 1);
 });
+
+common.llog.mylogObject(englisch);
+
+common.llog.mylogWithTime("Finished")
+
 
 // Done! A file called 'My Document.docx' will be in your file system.

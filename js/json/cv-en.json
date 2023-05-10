@@ -14,7 +14,8 @@
         "Streamlined CI/CD processes using Openshift and ArgoCD",
         "Achieved faster deployment times and reduced error rates"
       ],
-      "technologies": "Jira, Jenkins, Intellij, Java, Spring, Confluence, Kafka, Openshift, Kubernetes, Helm, ArgoCD, Confluence, Kubernetes"
+      "technologies": "Jira, Jenkins, Intellij, Java, Spring, Confluence, Kafka, Openshift, Kubernetes, Helm, ArgoCD, Confluence, Kubernetes",
+      "softskills": "Test Management,Teamwork and Collaboration,Software Development,DevOps"
     },
     {
       "date": "01.01.2021 - 31.05.2021",
@@ -26,7 +27,8 @@
         "Advised the project leader on organizational matters and employee management",
         "Improved team efficiency and communication, leading to higher project success rates"
       ],
-      "technologies": "Jira, Sharepoint, Java, Node.js, Spring, Confluence"
+      "technologies": "Jira, Sharepoint, Java, Node.js, Spring, Confluence",
+      "softskills": "Project Management,IT-Consulting Technical Consulting,Teamwork and Collaboration"
     },
     {
       "date": "01.08.2020 - 31.12.2020",
@@ -36,7 +38,8 @@
         "Coordinated and executed performance tests for the rollout of a new version of Adcubum Syrius",
         "Ensured optimal system performance and stability, resulting in a seamless transition for end users"
       ],
-      "technologies": "Jira, Sharepoint, NeoLoad, Splunk, Confluence"
+      "technologies": "Jira, Sharepoint, NeoLoad, Splunk, Confluence",
+      "softskills": "Test Management,Process Optimization,IT-Beratung EDV Beratung,Technische Analysen"
     },
     {
       "date": "01.02.2020 - 31.07.2020",
@@ -47,18 +50,19 @@
         "Developed a new customer relationship management portal for VP-Bank Liechtenstein",
         "Enhanced user experience and streamlined client communication, leading to increased customer satisfaction"
       ],
-      "technologies": "Java, Spring, Kafka, Swagger, Intellij, Junit, Jira, Bitbucket, Jira, Scrum"
+      "technologies": "Java, Spring, Kafka, Swagger, Intellij, Junit, Jira, Bitbucket, Jira, Scrum",
+      "softskills": "Software Development,Teamwork and Collaboration"
     },
     {
-      "date":  "01.03.2019 - 31.08.2019"
-      ,
+      "date": "01.03.2019 - 31.08.2019",
       "company": "Eternitas Zurich",
       "position": "Lead Developer",
       "responsibilities": [
         "Implemented a blockchain-based solution for registering testaments",
         "Increased transparency and security, revolutionizing the testament registration process"
       ],
-      "technologies": "Jenkins, AWS, Bitbucket, Java, Linux, React , IPFS, SubtleCrypto, Docker, AWS, Linux, Scrum"
+      "technologies": "Jenkins, AWS, Bitbucket, Java, Linux, React , IPFS, SubtleCrypto, Docker, AWS, Linux, Scrum",
+      "softskills": "Project Management, Teamwork and Collaboration,Software Architecture"
     },
     {
       "date": "01.06.2018 - 31.12.2018",
@@ -68,7 +72,8 @@
         "Analyzed and documented ERP systems and SAP implementation",
         "Provided actionable insights to streamline processes and increase efficiency across the organization"
       ],
-      "technologies": "JBoss, JSP, Servlets, Struts, Spring, Scrum, Java,Javascript ,JSF ,Tomcat ,Docker ,Eclipse ,React ,Spring Boot, Oracle, Scrum"
+      "technologies": "JBoss, JSP, Servlets, Struts, Spring, Scrum, Java,Javascript ,JSF ,Tomcat ,Docker ,Eclipse ,React ,Spring Boot, Oracle, Scrum",
+      "softskills": "IT-Consulting Technical Consulting,Software Development,Technical Analysis,Software Architecture,Teamwork and Collaboration"
     },
     {
       "date": "01.06.2016 - 31.10.2017",
@@ -78,7 +83,8 @@
         "Developed and improved \"Asset-View,\" a depot data management system",
         "Facilitated easier data access and management, leading to improved decision-making and resource allocation"
       ],
-      "technologies": "Scrum, Intellij, Bitbucket, Jira, Struts, Java, Javascript, JSP, JSF, Oracle, Linux"
+      "technologies": "Scrum, Intellij, Bitbucket, Jira, Struts, Java, Javascript, JSP, JSF, Oracle, Linux",
+      "softskills": "Software Development,Teamwork and Collaboration,Technical Analysis"
     },
     {
       "date": "01.05.2014 - 30.06.2015",
@@ -88,7 +94,8 @@
         "Automated deployments for vehicle insurance systems",
         "Increased deployment speed and reduced errors, resulting in a more efficient and stable system"
       ],
-      "technologies": "Scrum, Jenkins, Maven, Groovy, Selenium, Jira, JProfiler, Dynatrace, Intellij, Javascript, JBoss, Spring Boot"
+      "technologies": "Scrum, Jenkins, Maven, Groovy, Selenium, Jira, JProfiler, Dynatrace, Intellij, Javascript, JBoss, Spring Boot",
+      "softskills": "Teamwork and Collaboration,Software Development,DevOps"
     },
     {
       "date": "01.04.2013 - 31.12.2013",
@@ -98,7 +105,8 @@
         "Implemented test automation and improved build management",
         "Streamlined testing processes and reduced time to release for internal application releases"
       ],
-      "technologies": "Teamcity, Maven, Jenkins, Webservices , JSF , Linux"
+      "technologies": "Teamcity, Maven, Jenkins, Webservices , JSF , Linux",
+      "softskills": "DevOps,Teamwork and Collaboration,Software Development"
     },
     {
       "date": "01.05.2010 - 31.03.2013",
@@ -108,7 +116,8 @@
         "Managed application configurations for credit risk systems",
         "Ensured consistent and reliable configurations, minimizing errors and system downtime"
       ],
-      "technologies": "Teamcity, Maven, Jenkins, Webservices, JSF , Linux"
+      "technologies": "Teamcity, Maven, Jenkins, Webservices, JSF, Linux",
+      "softskills": "DevOps,Teamwork and Collaboration,Application Management"
     },
     {
       "date": "01.04.2009 - 31.02.2010",
@@ -118,7 +127,8 @@
         "Oversaw build management for KP 2.0 project",
         "Optimized build processes and facilitated faster, more reliable application releases"
       ],
-      "technologies": "Jenkins, Maven, Perl, Javascript"
+      "technologies": "Jenkins, Maven, Perl, Javascript",
+      "softskills": "Teamwork and Collaboration,DevOps,Softwareentwicklung"
     },
     {
       "date": "01.10.2007 - 30.11.2008",
@@ -128,18 +138,19 @@
         "Developed a life insurance contract management system",
         "Improved contract processing and data accuracy, enhancing customer service and satisfaction"
       ],
-      "technologies": "Java, Eclipse, XML"
+      "technologies": "Java, Eclipse, XML",
+      "softskills": "Teamwork and Collaboration,Softwareentwicklung"
     },
     {
-      "date":  "01.10.2007 - 31.12.2007"
-      ,
+      "date": "01.10.2007 - 31.12.2007",
       "company": "lyrx GmbH Zürich",
       "position": "Managing Director",
       "responsibilities": [
         "Established and managed the operations of lyrx GmbH",
         "Successfully launched the company and secured initial client engagements"
       ],
-      "technologies": ""
+      "technologies": "",
+      "softskills": "Project Management"
     }
   ],
   "festanstellung": [
@@ -150,7 +161,8 @@
       "responsibilities": [
         "MaxDB: Installation Tools"
       ],
-      "technologies": "Perl, Java , Swing, SAP"
+      "technologies": "Perl, Java , Swing, SAP",
+      "softskills": "Software Development, Databases"
     },
     {
       "date": "01.08.2001 - 31.08.2003",
@@ -159,7 +171,8 @@
       "responsibilities": [
         "Vorgangsbearbeitungssystem der Polizei NRW: NIVADIS"
       ],
-      "technologies": "XML, Java , Swing, Jenkins, Maven, JProfiler"
+      "technologies": "XML, Java , Swing, Jenkins, Maven, JProfiler",
+      "softskills": "IT-Consulting Technical Consulting,Software Development,Teamwork and Collaboration"
     },
     {
       "date": "01.01.2001 - 31.07.2001",
@@ -168,27 +181,28 @@
       "responsibilities": [
         "abaXX EJB Components: Training Environment"
       ],
-      "technologies": "Java"
+      "technologies": "Java",
+      "softskills": "Teamwork and Collaboration, Software Development"
     },
     {
-      "date": "01.09.1999 - 31.12.2000"
-      ,
+      "date": "01.09.1999 - 31.12.2000",
       "company": "BCT AG Willstädt",
       "position": "Java-Developer",
       "responsibilities": [
         "BCT Portal for Mechanical Engineers"
       ],
-      "technologies": "Java, Perl, MySQL, XML"
+      "technologies": "Java, Perl, MySQL, XML",
+      "softskills": "Teamwork and Collaboration, Software Development"
     },
     {
-      "date": "01.05.1998 - 31.08.1999"
-      ,
+      "date": "01.05.1998 - 31.08.1999",
       "company": "SAP AG Walldorf",
       "position": "Java Developer",
       "responsibilities": [
         "Tools for Oracle DBA; \"SAPDBA\""
       ],
-      "technologies": "Java , XML , Java , Oracle , SAP"
+      "technologies": "Java , XML , Java , Oracle , SAP",
+      "softskills": "Databases, Software Development, Teamwork und Zusammenarbeit"
     },
     {
       "date": "01.05.1996 - 30.04.1998",
@@ -197,7 +211,8 @@
       "responsibilities": [
         "Installation and Migration Tests for SAP R/3 on UNIX"
       ],
-      "technologies": "Oracle, Linux, Java"
+      "technologies": "Oracle, Linux, Java",
+      "softskills": "Application Management"
     }
   ]
 }

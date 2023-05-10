@@ -72,6 +72,14 @@ async function asDocxInternal(cv,isEnglish) {
                     },
                     []).concat([
                     new docx.Paragraph({
+                        text: isEnglish ? "Skill Set" : "Skills",
+                        heading: docx.HeadingLevel.HEADING_1,
+                    }),
+                    new docx.Paragraph({
+                        text: `${await softSkillString(isEnglish)}`,
+
+                    }),
+                    new docx.Paragraph({
                         text: isEnglish ? `Technical Skills` : "Technische Skills",
                         heading: docx.HeadingLevel.HEADING_1,
                     }),
@@ -118,11 +126,11 @@ async function readCV_objectInternal(p) {
 
 
 
-function filterbySkill(workExperienceList, skill) {
+function filterbySkill(workExperienceList, skill,skillset) {
     return workExperienceList.filter(
         function (we) {
             let subString = skill;
-            return common.isSubstringIgnoreCase(we["technologies"], subString);
+            return common.isSubstringIgnoreCase(we[skillset], subString);
         }
     )
 }
@@ -137,9 +145,9 @@ function totalSkillMonths(workExperienceList) {
     return sum;
 }
 
-function allSkills(workExperienceList) {
+function allSkills(workExperienceList,skillSet) {
     const allSkillsString = workExperienceList.reduce(function (accumulator, we) {
-        return `${we["technologies"]},${accumulator}`;
+        return `${we[skillSet]},${accumulator}`;
     }, "");
 
     const asList = allSkillsString.split(",").map((s) => s.trim()).filter((s) => {
@@ -181,18 +189,31 @@ ${c["index"]}.) ${c["date"]}: ${c["position"]} bei "${c["company"]}": ${c["respo
 }
 
 async function skillString(isEnglish){
+    return internalSkillString(isEnglish,"technologies");
+}
+
+async function softSkillString(isEnglish){
+    return internalSkillString(isEnglish,"softskills");
+}
+
+
+async function internalSkillString(isEnglish,skillSet){
     const {pimpedAlsSelbstaendiger,pimpedAlsAngestellter,pimpedAllPositions,allSkillsList} =
-        await skillsAndExperience(isEnglish);
+        await skillsAndExperience(isEnglish,skillSet);
 
     return allSkillsList.reduce(function (acc, c) {
             const skill = c;
-            const filteredBySkill = filterbySkill(pimpedAllPositions, skill)
+            const filteredBySkill = filterbySkill(pimpedAllPositions, skill,skillSet)
 
             return `${acc}${c} (${totalSkillMonthsAndYears(filteredBySkill,isEnglish)}),`
         }
         , "")
 }
-async function skillsAndExperience(isEnglish){
+
+
+
+
+async function skillsAndExperience(isEnglish,skillSet){
     const aCVObject = await ( isEnglish ? ( readCV_objectEnglish()): ( readCV_object()));
     const alsSelbstaendiger = aCVObject["work_experience"];
     const alsAngestellter = aCVObject["festanstellung"];
@@ -202,7 +223,7 @@ async function skillsAndExperience(isEnglish){
     const pimpedAlsAngestellter = pimpWorkExperience(alsAngestellter,pimpedAlsSelbstaendiger.length);
 
     const pimpedAllPositions = pimpedAlsSelbstaendiger.concat(pimpedAlsAngestellter);
-    const allSkillsList = allSkills(pimpedAllPositions);
+    const allSkillsList = allSkills(pimpedAllPositions,skillSet);
     return {
         pimpedAlsSelbstaendiger,pimpedAlsAngestellter,pimpedAllPositions,allSkillsList
     };
@@ -212,17 +233,27 @@ async function skillsAndExperience(isEnglish){
 
 async function cvprompt(question,isEnglish) {
     const {pimpedAlsSelbstaendiger,pimpedAlsAngestellter,pimpedAllPositions,allSkillsList} =
-       await  skillsAndExperience(isEnglish);
+       await  skillsAndExperience(isEnglish,"technologies");
 
-    const knowHow = allSkillsList.reduce(function (acc, c) {
-            const skill = c;
-            const filteredBySkill = filterbySkill(pimpedAllPositions, skill)
-            const ids = filteredBySkill.reduce(function (acc, c) {
-                return `${c["index"]},${acc}`;
-            }, "");
-            return `${acc}\n${c}: ${totalSkillMonthsAndYears(filteredBySkill)} (${ids})`
-        }
-        , "")
+    const softSkillsAndSchmodder =
+        await  skillsAndExperience(isEnglish,"softskills");
+
+
+
+    function findKnowHow (skillset,aSkillList,aAllPositions)  {
+        return aSkillList.reduce(function (acc, c) {
+                const skill = c;
+                const filteredBySkill = filterbySkill(aAllPositions, skill,skillset)
+                const ids = filteredBySkill.reduce(function (acc, c) {
+                    return `${c["index"]},${acc}`;
+                }, "");
+                return `${acc}\n${c}: ${totalSkillMonthsAndYears(filteredBySkill)} (${ids})`
+            }
+            , "");
+    }
+
+    const knowHow = findKnowHow("technologies",allSkillsList,pimpedAllPositions);
+    const softKnowhow = findKnowHow("softskills",softSkillsAndSchmodder.allSkillsList,softSkillsAndSchmodder.pimpedAllPositions);
 
     const vitaAlsSelbstaendiger = genVita(pimpedAlsSelbstaendiger)
     const vitaAlsAngestellter = genVita(pimpedAlsAngestellter)
@@ -238,8 +269,12 @@ Als fest angestellter IT-Consultant:
 ${vitaAlsAngestellter}
 
 
-Dein Know-How:
+Deine technisches KnowHow:
 ${knowHow}
+
+Deine Skills:
+
+${softKnowhow}
 
 
 Beantworte alle weiteren Fragen in der Ich-Form, als kämen sie von einem Recruiter.
@@ -251,7 +286,7 @@ ${question}
 
 
 export default {
-    cvprompt, asDocx, generateDocx,skillString
+    cvprompt, asDocx, generateDocx,skillString,softSkillString
 };
 
 

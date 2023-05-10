@@ -46,7 +46,6 @@ async function asDocxInternal(cv,isEnglish) {
                 text: `${we["company"]}: ${we["position"]} (${we["date"]})`,
                 heading: docx.HeadingLevel.HEADING_2,
             }),
-            newLine(),
             new docx.Paragraph({
                 text: we["responsibilities"][1],
                 bullet: {

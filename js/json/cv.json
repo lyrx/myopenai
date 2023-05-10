@@ -18,7 +18,7 @@
       "softskills": "Testmanagement,Teamwork und Zusammenarbeit,Softwareentwicklung,DevOps"
     },
     {
-      "date": "01.01.2021 – 31.05.2021",
+      "date": "01.01.2021 – 31.09.2021",
       "company": "Bundesamt für Migration und Flüchtlinge Nürnberg",
       "position": "Coach des Projektleiters",
       "responsibilities": [
@@ -52,18 +52,7 @@
       "softskills": "Softwareentwicklung,Teamwork und Zusammenarbeit"
     },
     {
-      "date": "01.03.2019 – 31.08.2019",
-      "company": "Eternitas Zürich",
-      "position": "Lead Developer",
-      "responsibilities": [
-        "Registrierung von Testamenten auf der Blockchain",
-        "Erhöhung von Transparenz und Sicherheit, Revolutionierung des Testamentsregistrierungsprozesses"
-      ],
-      "technologies": "Jenkins, AWS,  Bitbucket, Java, Linux, React , IPFS, SubtleCrypto, Docker, AWS, Linux, Scrum",
-      "softskills": "Projektmanagement,Teamwork und Zusammenarbeit,Technische Analysen,Softwarearchitektur"
-    },
-    {
-      "date": "01.06.2018 – 31.12.2018",
+      "date": "01.06.2018 – 31.12.2019",
       "company": "Galexis  Niederbipp",
       "position": "Technical Analyst",
       "responsibilities": [
@@ -96,18 +85,7 @@
       "softskills": "Teamwork und Zusammenarbeit,Softwareentwicklung,DevOps"
     },
     {
-      "date": "01.04.2013 – 31.12.2013",
-      "company": "Credit Suisse Zürich",
-      "position": "Senior Solution Engineer",
-      "responsibilities": [
-        "Implementierung von Testautomatisierung und Verbesserung des Build-Managements",
-        "Optimierung von Testprozessen und Verkürzung der Einführungszeit für Anwendungsversionen"
-      ],
-      "technologies": "Teamcity, Maven, Jenkins, Webservices , JSF , Linux",
-      "softskills": "DevOps,Teamwork und Zusammenarbeit,Softwareentwicklung"
-    },
-    {
-      "date": "01.05.2010 – 31.03.2013",
+      "date": "01.05.2010 – 31.12.2013",
       "company": "Credit Suisse Zürich",
       "position": "Software Configuration Manager",
       "responsibilities": [
@@ -138,17 +116,6 @@
       ],
       "technologies": "Java, Eclipse,  XML, Java",
       "softskills": "Teamwork und Zusammenarbeit,Softwareentwicklung"
-    },
-    {
-      "date": "01.10.2007 - 31.12.2007",
-      "company": "lyrx GmbH Zürich",
-      "position": "Geschäftsführer",
-      "responsibilities": [
-        "Aufbau Geschäftstätigkeit lyrx GmbH",
-        "Entwicklung von Strategien zur Marktpositionierung und Kundenakquise, was zu einem erfolgreichen Start des Unternehmens beitrug"
-      ],
-      "technologies": "",
-      "softskills": "Projektmanagement"
     }
   ],
   "festanstellung": [

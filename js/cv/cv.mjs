@@ -277,8 +277,6 @@ ${knowHow}
 ${isEnglish ? "Your Skills:" :  "Deine Skills:" }
 ${softKnowhow}
 
-${isEnglish ? `Answer questions as if they were asked by a recruiter and talk about yourself in the first person singular.` : `Beantworte alle weiteren Fragen in der Ich-Form, als kämen sie von einem Recruiter.` }
-
 ${question}
 `
 

@@ -179,10 +179,10 @@ function pimpWorkExperience(workExperience,offset) {
     })
 }
 
-function genVita(aPimped){
+function genVita(aPimped,isEnglish){
     return  aPimped.reduce(function (acc, c) {
         return `${acc}
-${c["index"]}.) ${c["date"]}: ${c["position"]} bei "${c["company"]}": ${c["responsibilities"][0]}`
+${c["index"]}.) ${c["date"]}: ${c["position"]} ${isEnglish ? "at" : "bei"} "${c["company"]}": ${c["responsibilities"][0]}`
 
     }, "");
 }
@@ -246,7 +246,7 @@ async function cvprompt(question,isEnglish) {
                 const ids = filteredBySkill.reduce(function (acc, c) {
                     return `${c["index"]},${acc}`;
                 }, "");
-                return `${acc}\n${c}: ${totalSkillMonthsAndYears(filteredBySkill)} (${ids})`
+                return `${acc}\n${c}: ${totalSkillMonthsAndYears(filteredBySkill,isEnglish)} (${ids})`
             }
             , "");
     }
@@ -254,29 +254,30 @@ async function cvprompt(question,isEnglish) {
     const knowHow = findKnowHow("technologies",allSkillsList,pimpedAllPositions);
     const softKnowhow = findKnowHow("softskills",softSkillsAndSchmodder.allSkillsList,softSkillsAndSchmodder.pimpedAllPositions);
 
-    const vitaAlsSelbstaendiger = genVita(pimpedAlsSelbstaendiger)
-    const vitaAlsAngestellter = genVita(pimpedAlsAngestellter)
+    const vitaAlsSelbstaendiger = genVita(pimpedAlsSelbstaendiger,isEnglish)
+    const vitaAlsAngestellter = genVita(pimpedAlsAngestellter,isEnglish)
 
-    return `
-Dein Name ist Alexander Weinmann. Du bist IT-Consultant. Du bist am
+    return `    
+${isEnglish ? `Your name  is Alexander Weinmann. You work as  IT Consultant. You are born on
+1965/20/10. You are 57 years old.
+
+As freelance consultant:` : `Dein Name ist Alexander Weinmann. Du bist IT-Consultant. Du bist am
 20.10.1965 geboren und 57 Jahre alt.
 
-Als freiberuflicher IT-Consultant:
+Als freiberuflicher IT-Consultant:`}
 ${vitaAlsSelbstaendiger}
 
-Als fest angestellter IT-Consultant:
+${isEnglish ? `Permanent positions:` : `Als fest angestellter IT-Consultant:`}
 ${vitaAlsAngestellter}
 
 
-Deine technisches KnowHow:
+${isEnglish ? "Your Technical Know How:" :  "Dein technisches Know How:" }
 ${knowHow}
 
-Deine Skills:
-
+${isEnglish ? "Your Skills:" :  "Deine Skills:" }
 ${softKnowhow}
 
-
-Beantworte alle weiteren Fragen in der Ich-Form, als kämen sie von einem Recruiter.
+${isEnglish ? `Answer questions as if they were asked by a recruiter and talk about yourself in the first person singular.` : `Beantworte alle weiteren Fragen in der Ich-Form, als kämen sie von einem Recruiter.` }
 
 ${question}
 `

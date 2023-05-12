@@ -26,7 +26,7 @@ und ich habe Fähigkeiten in Bereichen wie Softwareentwicklung, Datenbankmanagem
 I bring extensive knowledge of technologies such as Java, XML, SAP, Oracle and Linux. 
 
 My career spans diverse roles from Test Manager to Senior Java Developer, and I have developed skills in areas such as software development,
-database management and IT consulting. With a strong focus on teamwork and delivering effective technology solutions.`,
+database management and IT consulting.`,
 
 
     heypi: `

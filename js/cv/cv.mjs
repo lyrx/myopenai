@@ -44,7 +44,7 @@ async function asDocxInternal(cv,isEnglish) {
         return [
             new docx.Paragraph({
                 text: `${we["company"]}: ${we["position"]} (${we["date"]})`,
-                heading: docx.HeadingLevel.HEADING_2,
+                heading: docx.HeadingLevel.HEADING_3,
             }),
             new docx.Paragraph({
                 text: we["responsibilities"][1],

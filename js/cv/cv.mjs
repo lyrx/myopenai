@@ -1,6 +1,6 @@
 import {readFile} from "../json/jsonutils.mjs";
 import common from "../util/common.mjs";
-import {project_home} from "../util/paths.mjs";
+import paths from "../util/paths.mjs";
 import {monthsBetween, stringToDates} from "../util/dates.mjs";
 import openai from "../openai/openai.mjs";
 
@@ -26,11 +26,11 @@ async function cvRequest(question) {
 
 
 async function readCV() {
-    return readCVByFile(`${project_home}/js/json/cv.json`)
+    return readCVByFile(`${paths.project_home}/js/json/cv.json`)
 }
 
 async function readCVEnglish() {
-    return readCVByFile(`${project_home}/js/json/cv-en.json`)
+    return readCVByFile(`${paths.project_home}/js/json/cv-en.json`)
 }
 
 async function readCVByFile(fileName) {

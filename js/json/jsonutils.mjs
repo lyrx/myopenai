@@ -13,7 +13,7 @@ async function readFile(aFile) {
         }
         return fs.readFile(aFile, 'utf8');
     } catch (err) {
-        common.llog.myerror('Error:', err);
+        common.llog.myerrorWithTime('Error:', err);
     }
 }
 

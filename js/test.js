@@ -1,12 +1,10 @@
 import common from "./util/common.mjs";
-import prompts from "./json/prompts.mjs";
-import openai from "./openai/openai.mjs";
 import cv from "./cv/cv.mjs"
+import chat from "./cv/chat_completion.mjs"
 
+const response = await chat.chatCompletion();
 
-await cv.cvRequest("Wo hast du Erfahrungen im Projektmanagement?");
-
-
+cmmon.llog.mylogObject(response.data)
 common.llog.mylogWithTime("Finished!")
 
 

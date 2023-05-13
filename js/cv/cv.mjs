@@ -2,96 +2,27 @@ import {readFile} from "../json/jsonutils.mjs";
 import common from "../util/common.mjs";
 import {project_home} from "../util/paths.mjs";
 import {monthsBetween, stringToDates} from "../util/dates.mjs";
-import fs from "fs";
-import docx from 'docx';
+import openai from "../openai/openai.mjs";
 
 
-async function generateDocx() {
-    await generateDocxAndWriteFileInternal(await asDocx(),"cv.docx");
-    await generateDocxAndWriteFileInternal(await asDocxEnglish(),"cv-en.docx");
-}
-
-
-
-async function generateDocxAndWriteFileInternal(doc, fileNameToWrite) {
-    docx.Packer.toBuffer(doc).then((buffer) => {
-        fs.writeFileSync(fileNameToWrite, buffer);
+async function cvRequest(question) {
+    const response = await openai.createCompletion({
+        model: "text-davinci-003",
+        prompt: await cvprompt(question),
+        temperature: 0,
+        max_tokens: 600,
+        top_p: 1.0,
+        frequency_penalty: 0.0,
+        presence_penalty: 0.0,
     });
+
+
+    common.llog.mylog(response.data.choices[0].text);
+
+
+    common.llog.mylogObject(response.data.usage);
 }
 
-
-
-async function asDocx() {
-   return asDocxInternal(await readCV_object(),false)
-}
-
-async function asDocxEnglish() {
-    return asDocxInternal(await readCV_objectEnglish(),true)
-}
-async function asDocxInternal(cv,isEnglish) {
-
-    const wl = cv.projects();
-
-    function newLine() {
-        return new docx.Paragraph({
-            children: [
-                new docx.TextRun("\n"),
-            ],
-        });
-    }
-
-    function workDescription(we) {
-        return [
-            new docx.Paragraph({
-                text: `${we["company"]}: ${we["position"]} (${we["date"]})`,
-                heading: docx.HeadingLevel.HEADING_3,
-            }),
-            new docx.Paragraph({
-                text: we["responsibilities"][1],
-                bullet: {
-                    level: 0
-                },
-            }),
-            new docx.Paragraph({
-                text: we["responsibilities"][0],
-                bullet: {
-                    level: 0
-                },
-            }),
-            newLine(),
-        ];
-    }
-
-    return new docx.Document({
-        sections: [
-            {
-                properties: {},
-                children: wl.reduce(function (accumulator, we) {
-                        return accumulator.concat(workDescription(we));
-                    },
-                    []).concat([
-                    new docx.Paragraph({
-                        text: isEnglish ? "Skill Set" : "Skills",
-                        heading: docx.HeadingLevel.HEADING_1,
-                    }),
-                    new docx.Paragraph({
-                        text: `${await softSkillString(isEnglish)}`,
-
-                    }),
-                    new docx.Paragraph({
-                        text: isEnglish ? `Technical Skills` : "Technische Skills",
-                        heading: docx.HeadingLevel.HEADING_1,
-                    }),
-                    new docx.Paragraph({
-                        text: `${await skillString(isEnglish)}`,
-
-                    }),
-
-                ]),
-            },
-        ],
-    });
-}
 
 
 async function readCV() {
@@ -128,8 +59,7 @@ async function readCV_objectInternal(p) {
 function filterbySkill(workExperienceList, skill,skillset) {
     return workExperienceList.filter(
         function (we) {
-            let subString = skill;
-            return common.isSubstringIgnoreCase(we[skillset], subString);
+            return common.isSubstringIgnoreCase(we[skillset], skill);
         }
     )
 }
@@ -137,11 +67,11 @@ function filterbySkill(workExperienceList, skill,skillset) {
 
 function totalSkillMonths(workExperienceList) {
 
-    const sum = workExperienceList.reduce(function (accumulator, we) {
+    return workExperienceList.reduce(function (accumulator, we) {
 
         return accumulator + we["monthsDuration"];
     }, 0);
-    return sum;
+
 }
 
 function allSkills(workExperienceList,skillSet) {
@@ -154,8 +84,8 @@ function allSkills(workExperienceList,skillSet) {
     });
 
 
-    const uniqueList = [...new Set(asList)];
-    return uniqueList
+   return [...new Set(asList)];
+
 }
 
 
@@ -173,8 +103,7 @@ function pimpWorkExperience(workExperience,offset) {
         const [fromDate, toDate] = stringToDates(we["date"]);
         we.fromDate = fromDate;
         we.toDate = toDate;
-        const months = monthsBetween(fromDate, toDate);
-        we.monthsDuration = months;
+        we.monthsDuration = monthsBetween(fromDate, toDate);
         return we;
     })
 }
@@ -197,12 +126,11 @@ async function softSkillString(isEnglish){
 
 
 async function internalSkillString(isEnglish,skillSet){
-    const {pimpedAlsSelbstaendiger,pimpedAlsAngestellter,pimpedAllPositions,allSkillsList} =
+    const {pimpedAllPositions,allSkillsList} =
         await skillsAndExperience(isEnglish,skillSet);
 
     return allSkillsList.reduce(function (acc, c) {
-            const skill = c;
-            const filteredBySkill = filterbySkill(pimpedAllPositions, skill,skillSet)
+            const filteredBySkill = filterbySkill(pimpedAllPositions, c,skillSet)
 
             return `${acc}${c} (${totalSkillMonthsAndYears(filteredBySkill,isEnglish)}),`
         }
@@ -241,8 +169,7 @@ async function cvprompt(question,isEnglish) {
 
     function findKnowHow (skillset,aSkillList,aAllPositions)  {
         return aSkillList.reduce(function (acc, c) {
-                const skill = c;
-                const filteredBySkill = filterbySkill(aAllPositions, skill,skillset)
+                const filteredBySkill = filterbySkill(aAllPositions, c,skillset)
                 const ids = filteredBySkill.reduce(function (acc, c) {
                     return `${c["index"]},${acc}`;
                 }, "");
@@ -284,7 +211,14 @@ ${question}
 
 
 export default {
-    cvprompt, asDocx, generateDocx,skillString,softSkillString
+    cvprompt,
+    cvRequest,
+    skillString,
+    softSkillString,
+    readCV_object,
+    readCV,
+    readCV_objectEnglish,
+    readCVEnglish
 };
 
 

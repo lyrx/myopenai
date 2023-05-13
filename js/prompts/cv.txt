@@ -1,0 +1,57 @@
+1.) Test-Manager, SBB Bern (10.2021 - 12.2022)
+
+Verantwortung für CI/CD-Prozesse mit Openshift und ArgoCD
+Verbesserung der Softwarequalität und Reduzierung der Markteinführungszeit durch effektive Testverfahren und kontinuierliche Integration
+
+2.) Coach des Projektleiters, Bundesamt für Migration und Flüchtlinge Nürnberg (01.2021 - 05.2021)
+Beratung des Projektleiters bei organisatorischen Fragen und Mitarbeiterführung
+Unterstützung bei der Optimierung von Teamdynamiken und Prozessen, was zu einer verbesserten Projektleistung und einer erfolgreichen Projektabwicklung führte
+
+3.) Performance-Analyst, Helsana Versicherungen AG (08.2020 - 12.2020)
+Koordination und Durchführung von Lasttests für den Rollout einer neuen Version von Adcubum Syrius
+Sicherstellung einer optimalen Systemleistung und Stabilität, was zu einem nahtlosen Übergang für Endbenutzer führte
+
+4.) Senior Java-Entwickler, Adnovum Informatik AG Zürich (02.2020 - 07.2020)
+Entwicklung eines neuen Customer-Relationship-Management-Portals für die VP-Bank Liechtenstein
+Verbesserte Benutzererfahrung und optimierte Kundenkommunikation, was zu einer erhöhten Kundenzufriedenheit führte
+
+5.) Senior Java-Berater, Kantonspolizei St. Gallen (09.2019 - 11.2019)
+Analyse und Test des Vorgangsbearbeitungssystems (LogObject)
+Identifikation und Behebung kritischer Probleme, Verbesserung der Zuverlässigkeit und Leistung des Systems
+
+6.) Lead Developer, Eternitas Zürich (03.2019 - 08.2019)
+Implementierung einer Blockchain-basierten Lösung für die Registrierung von Testamenten
+Erhöhung von Transparenz und Sicherheit, Revolutionierung des Testamentsregistrierungsprozesses
+
+7.) Technischer Analyst, Galexis Niederbipp (06.2018 - 12.2018)
+Analyse und Dokumentation von ERP-Systemen und SAP-Implementierung
+Bereitstellung umsetzbarer Erkenntnisse zur Optimierung von Prozessen und Steigerung der Effizienz im gesamten Unternehmen
+
+8.) Senior Development Engineer, Adnovum Informatik AG Zürich (06.2016 - 10.2017)
+Entwicklung von "Asset-View", einem Depotdatenverwaltungssystem
+Erleichterung des Datenzugriffs und der Verwaltung, was zu einer verbesserten Entscheidungsfindung und Ressourcenzuweisung führte
+
+9.) DevOps, AXA Winterthur (05.2014 - 06.2015)
+Automatisierung von Bereitstellungen für Fahrzeugversicherungssysteme
+Erhöhung der Bereitstellungsgeschwindigkeit und Reduzierung von Fehlern, was zu einem effizienteren und stabileren System führte
+
+10.) Senior Solution Engineer, Credit Suisse Zürich (04.2013 - 12.2013)
+Implementierung von Testautomatisierung und Verbesserung des Build-Managements
+Optimierung von Testprozessen und Verkürzung der Markteinführungszeit für Anwendungsversionen
+
+11.) Software Configuration Manager, Credit Suisse Zürich (05.2010 - 03.2013)
+Verwaltung von Applikationskonfigurationen für Kreditrisikosysteme
+Sicherstellung konsistenter und zuverlässiger Konfigurationen, Minimierung von Fehlern und Systemausfallzeiten
+
+12.) Software Configuration Manager, Commerzbank Frankfurt (04.2009 - 02.2010)
+Überwachung des Build-Managements für das KP 2.0 Projekt
+Optimierung von Build-Prozessen und Sicherstellung einer effizienten und fehlerfreien Bereitstellung von Softwareversionen
+
+
+Senior Java-Entwickler, SwissLife Zürich (10.2007 - 11.2008)
+Verantwortlich für die Vertragsverwaltung von Lebensversicherungen
+Implementierung von Verbesserungen und neuen Funktionen, die zur Optimierung der Vertragsverwaltung und einer höheren Kundenzufriedenheit führten
+
+14.) Geschäftsführer, lyrx GmbH Zürich (10.2007 - 12.2007)
+Verantwortung für den Aufbau der Geschäftstätigkeit der lyrx GmbH
+Entwicklung von Strategien zur Marktpositionierung und Kundenakquise, was zu einem erfolgreichen Start des Unternehmens beitrug

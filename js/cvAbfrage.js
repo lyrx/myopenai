@@ -1,4 +1,3 @@
-import openai from "./openai/openai.mjs";
+import cv from "./cv/cv.mjs"
 
-
-await openai.cvRequest(`Wie viel Erfahrung hast du mit Java. Gib alle Firmen an.`)
+await cv.cvRequest(`Wie viel Erfahrung hast du mit Java. Gib alle Firmen an.`)

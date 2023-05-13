@@ -1,0 +1,56 @@
+1.)Test Manager, SBB Bern (10.2021 - 12.2022)
+Streamlined CI/CD processes using Openshift and ArgoCD
+Achieved faster deployment times and reduced error rates
+
+2.) Project Leader Coach, Bundesamt für Migration und Flüchtlinge Nürnberg (01.2021 - 05.2021)
+Advised the project leader on organizational matters and employee management
+Improved team efficiency and communication, leading to higher project success rates
+
+3.) Performance Analyst, Helsana Versicherungen AG (08.2020 - 12.2020)
+Coordinated and executed performance tests for the rollout of a new version of Adcubum Syrius
+Ensured optimal system performance and stability, resulting in a seamless transition for end users
+
+4.) Senior Java Developer, Adnovum Informatik AG Zürich (02.2020 - 07.2020)
+
+Developed a new customer relationship management portal for VP-Bank Liechtenstein
+Enhanced user experience and streamlined client communication, leading to increased customer satisfaction
+
+5.) Senior Java Consultant, Kantonspolizei St Gallen (09.2019 - 11.2019)
+Analyzed and tested the Vorgangsbearbeitungssystem (LogObject)
+Identified and resolved critical issues, enhancing the system's overall reliability and performance
+
+6.) Lead Developer, Eternitas Zürich (03.2019 - 08.2019)
+Implemented a blockchain-based solution for registering testaments
+Increased transparency and security, revolutionizing the testament registration process
+
+7.) Technical Analyst, Galexis Niederbipp (06.2018 - 12.2018)
+Analyzed and documented ERP systems and SAP implementation
+Provided actionable insights to streamline processes and increase efficiency across the organization
+
+8.) Senior Development Engineer, Adnovum Informatik AG Zürich (06.2016 - 10.2017)
+Developed "Asset-View," a depot data management system
+Facilitated easier data access and management, leading to improved decision-making and resource allocation
+
+9.) DevOps, AXA Winterthur (05.2014 - 06.2015)
+Automated deployments for vehicle insurance systems
+Increased deployment speed and reduced errors, resulting in a more efficient and stable system
+
+10.) Senior Solution Engineer, Credit Suisse Zürich (04.2013 - 12.2013)
+Implemented test automation and improved build management
+Streamlined testing processes and reduced time to market for application releases
+
+11.) Software Configuration Manager, Credit Suisse Zürich (05.2010 - 03.2013)
+Managed application configurations for credit risk systems
+Ensured consistent and reliable configurations, minimizing errors and system downtime
+
+12.) Software Configuration Manager, Commerzbank Frankfurt (04.2009 - 02.2010)
+Oversaw build management for KP 2.0 project
+Optimized build processes and facilitated faster, more reliable application releases
+
+13.) Senior Java Developer, SwissLife Zürich (10.2007 - 11.2008)
+Developed a life insurance contract management system
+Improved contract processing and data accuracy, enhancing customer service and satisfaction
+
+14.) Managing Director, lyrx GmbH Zürich (10.2007 - 12.2007)
+Established and managed the operations of lyrx GmbH
+Successfully launched the company and secured initial client engagements

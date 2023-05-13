@@ -16,14 +16,14 @@ while remaining connected to technological advancements for maximum client value
 
     cvSummaryDeutsch: `
 Mit über 25 Jahren Erfahrung in der IT-Branche, sowohl in Festanstellung als auch als Freiberufler,
-bringe ich umfangreiche Kenntnisse in Technologien wie Java, XML, SAP, Oracle und Linux mit.
+bringe ich umfangreiche Kenntnisse in verschiedenen Technologien mit.
 
 Meine Karriere umfasst vielfältige Rollen von Test-Manager bis Senior Java-Developer,
 und ich habe Fähigkeiten in Bereichen wie Softwareentwicklung, Datenbankmanagement und IT-Beratung entwickelt.
 `,
 
     cvSummaryEnglish: `With over 25 years of experience in the IT industry, both as a permanent employee and as a freelancer,
-I bring extensive knowledge of technologies such as Java, XML, SAP, Oracle and Linux. 
+I bring extensive knowledge of technologies. 
 
 My career spans diverse roles from Test Manager to Senior Java Developer, and I have developed skills in areas such as software development,
 database management and IT consulting.`,

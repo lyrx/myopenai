@@ -1,4 +1,4 @@
-{
+export default {
   "name": "Alexander Weinmann",
   "address": "Weidstrasse 8, CH-8122 Binz",
   "phone": "+41 (0)76 257 69 61",

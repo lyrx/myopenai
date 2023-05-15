@@ -3,8 +3,8 @@ import common from "../util/common.mjs";
 import paths from "../util/paths.mjs";
 import {monthsBetween, stringToDates} from "../util/dates.mjs";
 import openai from "../openai/openai.mjs";
-
-
+import cvdata from "../json/cvdata.js";
+import cvdata_en from "../json/cvdata_en.js";
 async function cvRequest(question) {
     const response = await openai.createCompletion({
         model: "text-davinci-003",
@@ -25,33 +25,13 @@ async function cvRequest(question) {
 
 
 
-async function readCV() {
-    return readCVByFile(`${paths.project_home}/js/json/cv.json`)
-}
-
-async function readCVEnglish() {
-    return readCVByFile(`${paths.project_home}/js/json/cv-en.json`)
-}
-
-async function readCVByFile(fileName) {
-    return readFile(fileName)
-}
 
 
 async function readCV_object() {
-    return readCV_objectInternal(await readCV());
+    return cvdata;
 }
 async function readCV_objectEnglish() {
-    return readCV_objectInternal(await readCVEnglish());
-}
-
-
-async function readCV_objectInternal(p) {
-    const o = JSON.parse(p);
-    o.projects = function () {
-        return o["work_experience"]
-    };
-    return o;
+    return cvdata_en;
 }
 
 
@@ -216,9 +196,7 @@ export default {
     skillString,
     softSkillString,
     readCV_object,
-    readCV,
-    readCV_objectEnglish,
-    readCVEnglish
+    readCV_objectEnglish
 };
 
 

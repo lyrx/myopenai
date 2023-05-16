@@ -22,20 +22,12 @@ async function cvRequest(question) {
 
     common.llog.mylogObject(response.data.usage);
 }
-
-
-
-
-
 async function readCV_object() {
     return cvdata;
 }
 async function readCV_objectEnglish() {
     return cvdata_en;
 }
-
-
-
 function filterbySkill(workExperienceList, skill,skillset) {
     return workExperienceList.filter(
         function (we) {
@@ -43,8 +35,6 @@ function filterbySkill(workExperienceList, skill,skillset) {
         }
     )
 }
-
-
 function totalSkillMonths(workExperienceList) {
 
     return workExperienceList.reduce(function (accumulator, we) {
@@ -53,7 +43,6 @@ function totalSkillMonths(workExperienceList) {
     }, 0);
 
 }
-
 function allSkills(workExperienceList,skillSet) {
     const allSkillsString = workExperienceList.reduce(function (accumulator, we) {
         return `${we[skillSet]},${accumulator}`;
@@ -67,16 +56,12 @@ function allSkills(workExperienceList,skillSet) {
    return [...new Set(asList)];
 
 }
-
-
 function totalSkillMonthsAndYears(workExperienceList,isEnglish) {
     let sum = totalSkillMonths(workExperienceList);
     let years = Math.floor(sum / 12);
     let months = sum % 12
     return years > 0 ? `${years} ${isEnglish ? 'years' : 'Jahre' }, ${months}  ${isEnglish ? 'months' : 'Monate' }` : `${sum} ${isEnglish ? 'months' : 'Monate' }`
 }
-
-
 function pimpWorkExperience(workExperience,offset) {
     return workExperience.map(function (we, index) {
         we.index = index + 1 + (typeof offset !== 'undefined' ? offset : 0);
@@ -87,7 +72,6 @@ function pimpWorkExperience(workExperience,offset) {
         return we;
     })
 }
-
 function genVita(aPimped,isEnglish){
     return  aPimped.reduce(function (acc, c) {
         return `${acc}
@@ -95,16 +79,12 @@ ${c["index"]}.) ${c["date"]}: ${c["position"]} ${isEnglish ? "at" : "bei"} "${c[
 
     }, "");
 }
-
 async function skillString(isEnglish){
     return internalSkillString(isEnglish,"technologies");
 }
-
 async function softSkillString(isEnglish){
     return internalSkillString(isEnglish,"softskills");
 }
-
-
 async function internalSkillString(isEnglish,skillSet){
     const {pimpedAllPositions,allSkillsList} =
         await skillsAndExperience(isEnglish,skillSet);
@@ -116,10 +96,6 @@ async function internalSkillString(isEnglish,skillSet){
         }
         , "")
 }
-
-
-
-
 async function skillsAndExperience(isEnglish,skillSet){
     const aCVObject = await ( isEnglish ? ( readCV_objectEnglish()): ( readCV_object()));
     const alsSelbstaendiger = aCVObject["work_experience"];
@@ -135,18 +111,11 @@ async function skillsAndExperience(isEnglish,skillSet){
         pimpedAlsSelbstaendiger,pimpedAlsAngestellter,pimpedAllPositions,allSkillsList
     };
 }
-
-
-
 async function cvprompt(question,isEnglish) {
     const {pimpedAlsSelbstaendiger,pimpedAlsAngestellter,pimpedAllPositions,allSkillsList} =
        await  skillsAndExperience(isEnglish,"technologies");
-
     const softSkillsAndSchmodder =
         await  skillsAndExperience(isEnglish,"softskills");
-
-
-
     function findKnowHow (skillset,aSkillList,aAllPositions)  {
         return aSkillList.reduce(function (acc, c) {
                 const filteredBySkill = filterbySkill(aAllPositions, c,skillset)
@@ -188,8 +157,6 @@ ${question}
 `
 
 }
-
-
 export default {
     cvprompt,
     cvRequest,

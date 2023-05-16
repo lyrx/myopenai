@@ -1,13 +1,11 @@
 import common from "./util/common.mjs";
-import cv from "./cv/cv.mjs"
 import chat from "./cv/chat_completion.mjs"
-import completeprompt from "./prompts/completeprompt.mjs";
 
 
-const completion = await completeprompt.completePrompt("james", "Birds are not real.");
 
-common.llog.mylogObject(completion.data);
+const completion = await chat.cvCompletion();
 
+common.llog.mylog(completion.data.choices[0].message.content);
 
 
 common.llog.mylogWithTime("Finished!")

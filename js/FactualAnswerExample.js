@@ -1,7 +1,5 @@
-import {  openai } from "./openai/openai.mjs";
+import   openai  from "./openai/openai.mjs";
 import {mylog} from "./util/common.mjs";
-
-//const response = await openai.listEngines();
 
 const factualAnsweringSample = {
 
@@ -45,7 +43,7 @@ A:
 }
 
 
-const response = await openai.createCompletion({
+const response = await openai.openai.createCompletion({
     model: "text-davinci-003",
     prompt: factualAnsweringSample,
     temperature: 0,

@@ -6,7 +6,7 @@ import openai from "../openai/openai.mjs";
 import cvdata from "../json/cvdata.js";
 import cvdata_en from "../json/cvdata_en.js";
 async function cvRequest(question) {
-    const response = await openai.createCompletion({
+    const response = await openai.openai.createCompletion({
         model: "text-davinci-003",
         prompt: await cvprompt(question),
         temperature: 0,

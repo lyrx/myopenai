@@ -12,7 +12,7 @@ export default {
             {role: "system", content: `${await cv.cvprompt("",false)}`},
             {role: "user", content: "Welche Erfahrungen hast Du mit Java?"},
         ];
-        const completion = await openai.createChatCompletion({
+        const completion = await openai.openai.createChatCompletion({
             model: "gpt-3.5-turbo",
             messages: mymsg,
         });

@@ -11,7 +11,7 @@ export default {
   "date_of_birth": "20.10.1965",
   "work_experience": [
     {
-      "date": "01.10.2023 – 30.06.2023",
+      "date": "01.01.2023 – 30.06.2023",
       "company": "lyrx GmbH",
       "project": "AI-controlled website with self-disclosure function",
       "position": "Managing Director",

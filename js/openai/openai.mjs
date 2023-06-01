@@ -10,9 +10,6 @@ const configuration = new Configuration({
 export default {
     openai: new OpenAIApi(configuration),
     fetchChatCompletion: async function (env,messages,openaiUrl) {
-        const openaiUrl = "https://api.openai.com/v1/chat/completions";
-
-
         const headers = {
             'Content-Type': 'application/json',
             'Authorization': `Bearer ${env.OPENAI_API_KEY}`

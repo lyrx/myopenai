@@ -1,10 +1,28 @@
 export default {
+
+
+  "projects" : function(){
+    return this["work_experience"]
+  },
+
   "name": "Alexander Weinmann",
   "address": "Weidstrasse 8, CH-8122 Binz",
   "phone": "+41 (0)76 257 69 61",
   "desired_position": "IT-Consultant",
   "date_of_birth": "20.10.1965",
   "work_experience": [
+    {
+      "date": "01.10.2023 – 30.06.2023",
+      "company": "lyrx GmbH",
+      "project": "KI-gesteuerte Website mit Selbstauskunftsfunktion",
+      "position": "Geschäftsführer",
+      "responsibilities": [
+        "Ich optimierte den Kundenservice durch KI-gesteuerte Personalisierung",
+        "Ich habe eine interaktive, KI-basierte Chatbot-Lösung auf meiner Website implementiert, die mithilfe von ReactJS und JavaScript entwickelt und mit dem GPT-basierten Modell von OpenAI für personalisierte Benutzerinteraktionen und Informationsbereitstellung trainiert wurde."
+      ],
+      "technologies": "Intellij, React.JS, OpenAI, Node.JS, Javascript",
+      "softskills": "Teamwork und Zusammenarbeit,Softwareentwicklung"
+    },
     {
       "date": "01.10.2021 – 31.12.2022",
       "company": "SBB Bern",

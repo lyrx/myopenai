@@ -23,6 +23,11 @@ async function cvRequest(question) {
     common.llog.mylogObject(response.data.usage);
 }
 async function readCV_object() {
+
+    cvdata.projects = function () {
+        return cvdata["work_experience"]
+    };
+
     return cvdata;
 }
 async function readCV_objectEnglish() {

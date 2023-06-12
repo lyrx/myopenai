@@ -139,23 +139,23 @@ async function cvprompt(question,isEnglish) {
     const vitaAlsAngestellter = genVita(pimpedAlsAngestellter,isEnglish)
 
     return `    
-${isEnglish ? `Your name  is Alexander Weinmann. You work as  IT Consultant. You are born on
-1965/20/10. You are 57 years old.
+${isEnglish ? ` Alexander Weinmann  is an  IT Consultant. He is born on
+1965/20/10. He is now  57 years old.
 
-As freelance consultant:` : `Dein Name ist Alexander Weinmann. Du bist IT-Consultant. Du bist am
-20.10.1965 geboren und 57 Jahre alt.
+` : `Alexander Weinmann ist IT-Consultant. Er ist am
+20.10.1965 geboren und damit 57 Jahre alt.
 
-Als freiberuflicher IT-Consultant:`}
+`}
 ${vitaAlsSelbstaendiger}
 
 ${isEnglish ? `Permanent positions:` : `Als fest angestellter IT-Consultant:`}
 ${vitaAlsAngestellter}
 
 
-${isEnglish ? "Your Technical Know How:" :  "Dein technisches Know How:" }
+${isEnglish ? "His Technical Know How:" :  "Sein technisches Know How:" }
 ${knowHow}
 
-${isEnglish ? "Your Skills:" :  "Deine Skills:" }
+${isEnglish ? "His Skills:" :  "Seine Skills:" }
 ${softKnowhow}
 
 ${question}
